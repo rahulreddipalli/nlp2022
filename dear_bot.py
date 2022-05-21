@@ -9,7 +9,7 @@ if __name__ == '__main__' :
     def get_response():
         data = request.json
         print(data)
-        user_input = request['msg']
+        user_input = data['msg']
         predictions="t" #bot.get_response(user_input)
 
         return user_input
