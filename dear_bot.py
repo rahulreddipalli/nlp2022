@@ -8,9 +8,10 @@ if __name__ == '__main__' :
     @app.post('/get_response')
     def get_response():
         data = request.json
-        user_input = request.form['chat']
+        print(data)
+        user_input = request['msg']
         predictions="t" #bot.get_response(user_input)
 
-        return str(predictions)
+        return user_input
 
     app.run(debug=True)
