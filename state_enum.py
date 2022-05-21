@@ -1,6 +1,7 @@
-from enum import Enum
+from enum import Enum, auto
+
 class STATE(Enum):
-    GREETING = 0
-    RUNNING=1
-    ASKED_NAME=2
-    QUIT=3
+    GREETING = auto()
+    RUNNING=auto()
+    ASKED_NAME=auto()
+    QUIT=auto()

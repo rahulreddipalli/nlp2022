@@ -15,7 +15,7 @@ class Chatbot:
             response = "Hi {}! What do you want to do today".format(name)
             self.state =STATE.RUNNING
         
-
+        
         #if detects bye intent:
             #self.state = "QUIT"
             #response = "Goodbye"
@@ -30,4 +30,4 @@ class Chatbot:
             
     
     def _format_response(self,response):
-        return {"response":response,"state":self.state}
+        return {"response":response,"state":self.state.value}

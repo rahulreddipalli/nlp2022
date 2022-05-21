@@ -46,6 +46,7 @@ def group_split_entities(predictions):
   return entities
 
 def predict_ner(user_input):
+    logging.info("Making Prediction")
     prediction, _ = model.predict([user_input])
     grouped_entities = group_split_entities(prediction)
     logging.info('\nNER PREDICTION \nUser input: %s\n Predicted Entities: %s', user_input, str(grouped_entities))
