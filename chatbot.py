@@ -16,9 +16,14 @@ class Chatbot:
             self.state =STATE.RUNNING
         
 
-        #if intent_handler.get_intent(user_input)=="goodbye":
-            #self.state = "QUIT"
+        #if intent_handler.get_intent(user_input)=="greeting":
+            #name=ner_handler.get_entity(user_input,"PERSON")[0]
+            #response = "Hi {}! What do you want to do today".format(name)
             #response = "Goodbye"
+        
+        #if intent_handler.get_intent(user_input)=="view_entry":
+            #date = ner.show_last_entry(user_input)
+            #use date to find entry
         return self._format_response(response)
 
     def say_greeting(self):

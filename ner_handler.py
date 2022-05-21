@@ -56,3 +56,59 @@ def get_entity(user_input,entity_type):
   predictions = predict_ner(user_input)
   people = [k for k in predictions.keys() if predictions[k]==entity_type]
   return people
+
+from datetime import date, timedelta
+import difflib
+
+def search_by_weekday(predictions,input_split):
+  last_week = False
+  error = False
+  weekday = -1
+  target_date = ""
+  if 'week' in predictions.keys():
+      pre_week_pos = input_split.index('week')-1
+      if pre_week_pos>-1 and input_split[pre_week_pos].lower() == "last":
+        last_week = True
+
+  if last_week:
+    del predictions['week']
+    
+  for key in predictions.keys():
+    predictions[key]
+    if predictions[key] =='DATE':
+      days_of_week =[day.upper() for day in calendar.day_name]
+      day = difflib.get_close_matches(key.upper(), days_of_week)[0]
+      weekday = days_of_week.index(day)
+      break
+
+  today = date.today()
+  time_delta=timedelta(days=-today.weekday()+weekday)
+  start = today + time_delta
+  if not last_week:
+    potential_days = list(filter(lambda v: re.match('([0-9])', v), input_split))
+    if len(potential_days)>0:
+      target = today - timedelta(days=int(potential_days[0]))
+    else:
+      offset = (today.weekday() - weekday) % 7
+      target = today - timedelta(days=offset)
+    
+  else:
+    target = start - timedelta(days=7)
+  target_date = str(target)
+
+#weekday==-1 and 
+  return target_date
+
+def show_last_entry(user_input):
+  print("What entry do you want to see")
+  print(user_input)
+  predictions = predict_ner(user_input)
+  input_split = user_input.split(" ")
+  potential_dates = list(filter(lambda v: re.match('(^(0[1-9]|[12][0-9]|3[01])(-|\/)(0[1-9]|1[0-2])(-|\/)\d{4}$)', v), input_split))
+  target_date = ""
+  if len(potential_dates)>0:
+    target_date=potential_dates[0]
+  else:
+    target_date = search_by_weekday(predictions,input_split)
+
+  return target_date
