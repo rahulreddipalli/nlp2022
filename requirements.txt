@@ -1,0 +1,4 @@
+flask
+simpletransformers
+torch
+requests
