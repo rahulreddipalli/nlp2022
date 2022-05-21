@@ -70,3 +70,35 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\
 INFO:werkzeug: * Restarting with watchdog (windowsapi)
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\wrappers.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\test.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\enum.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\sansio\\request.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356

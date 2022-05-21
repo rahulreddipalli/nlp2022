@@ -15,8 +15,8 @@ class Chatbot:
             response = "Hi {}! What do you want to do today".format(name)
             self.state =STATE.RUNNING
         
-        
-        #if detects bye intent:
+
+        #if intent_handler.get_intent(user_input)=="goodbye":
             #self.state = "QUIT"
             #response = "Goodbye"
         return self._format_response(response)
