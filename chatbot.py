@@ -1,22 +1,30 @@
 from unicodedata import name
-
+from state_enum import STATE
 #import ner_handler
+
 
 class Chatbot:
     def __init__(self,name):
         self.name = name
-        self.state = "GREETING"
+        self.state = STATE.GREETING
     
     def get_response(self,user_input):
         response = ""
-        if self.state == "ASKED_NAME":
+        if self.state == STATE.ASKED_NAME:
             response = "Hi {}! What do you want to do today".format(user_input)
+            self.state ="RUNNING"
+        
+        #if detects bye intent:
+            #self.state = "QUIT"
+            #response = "Goodbye"
         return self._format_response(response)
 
     def say_greeting(self):
-        if self.state=="GREETING":
-            self.state = "ASKED_NAME"
-            return self._format_response("Hey what's your name?")
+        response = ""
+        if self.state==STATE.GREETING:
+            self.state = STATE.ASKED_NAME
+            response = "Hey what's your name?"
+        return self._format_response(response)
             
     
     def _format_response(self,response):

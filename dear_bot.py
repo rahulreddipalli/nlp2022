@@ -16,7 +16,7 @@ if __name__ == '__main__' :
 
     @app.post('/start_greeting')   
     def start_greeting():
-        print(bot.say_greeting())
-        return json.dumps(bot.say_greeting())
+        response=bot.say_greeting()
+        return json.dumps(response)
         
     app.run(debug=True)
