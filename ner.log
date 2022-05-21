@@ -1,0 +1,104 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\json\\encoder.py', reloading
+INFO:werkzeug:127.0.0.1 - - [21/May/2022 21:53:27] "[35m[1mPOST /start_greeting HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\json\\decoder.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [21/May/2022 21:57:00] "[35m[1mPOST /start_greeting HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\dear_bot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\dear_bot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [21/May/2022 21:58:12] "[35m[1mPOST /start_greeting HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\state_enum.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\state_enum.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\state_enum.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\state_enum.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [21/May/2022 22:01:01] "POST /start_greeting HTTP/1.1" 200 -
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\runpy.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\multiprocessing\\spawn.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\ner_handler.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\ner_handler.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\ner_handler.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [21/May/2022 22:03:27] "POST /start_greeting HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: Hi. My name is Nkem
+ Predicted Entities: {'Nkem': 'PERSON'}
+INFO:werkzeug:127.0.0.1 - - [21/May/2022 22:03:52] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\wrappers.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\test.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\enum.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\sansio\\request.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
