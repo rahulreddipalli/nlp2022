@@ -1,0 +1,16 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\json\\encoder.py', reloading
+INFO:werkzeug:127.0.0.1 - - [21/May/2022 21:53:27] "[35m[1mPOST /start_greeting HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\json\\decoder.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356

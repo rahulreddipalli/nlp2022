@@ -1,6 +1,6 @@
 from unicodedata import name
 from state_enum import STATE
-#import ner_handler
+import ner_handler
 
 
 class Chatbot:
@@ -11,9 +11,11 @@ class Chatbot:
     def get_response(self,user_input):
         response = ""
         if self.state == STATE.ASKED_NAME:
-            response = "Hi {}! What do you want to do today".format(user_input)
-            self.state ="RUNNING"
+            name=ner_handler.get_entity(user_input,"PERSON")[0]
+            response = "Hi {}! What do you want to do today".format(name)
+            self.state =STATE.RUNNING
         
+
         #if detects bye intent:
             #self.state = "QUIT"
             #response = "Goodbye"
