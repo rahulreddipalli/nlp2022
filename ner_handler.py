@@ -1,9 +1,6 @@
-#Try grouping potentially split up entities
-import logging
 import joblib
 import calendar
-
-logging.basicConfig(filename='ner.log', encoding='utf-8', level=logging.INFO)
+import chatbot_logger
 
 
 import torch
@@ -15,6 +12,7 @@ cuda_available = torch.cuda.is_available()
 model = joblib.load("ner_classifier_nmp.joblib")
       
 new_labels_enum = {"PER":"PERSON","LOC":"GPE","ORG":"ORGANIZATION","MISC":"MISCELLANEOUS"}
+
 begin_ent = re.compile("B-[A-Za-z]+")
 def group_split_entities(predictions):
   entities = {}
@@ -46,10 +44,9 @@ def group_split_entities(predictions):
   return entities
 
 def predict_ner(user_input):
-    logging.info("Making Prediction")
     prediction, _ = model.predict([user_input])
     grouped_entities = group_split_entities(prediction)
-    logging.info('\nNER PREDICTION \nUser input: %s\n Predicted Entities: %s', user_input, str(grouped_entities))
+    chatbot_logger.log_prediction("Making NER Predictions",user_input,grouped_entities)
     return grouped_entities
 
 def get_entity(user_input,entity_type):

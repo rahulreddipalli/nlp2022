@@ -1,3 +1,5 @@
 
 *.joblib
 *.log
+*.log
+ner.log
