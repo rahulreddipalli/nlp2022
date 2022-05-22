@@ -1,4 +1,5 @@
 *.joblib
 *.log
-__pycache__*
+*.pyc
 csvs
+.idea*
