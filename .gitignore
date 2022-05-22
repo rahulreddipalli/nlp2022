@@ -1,5 +1,3 @@
-
 *.joblib
 *.log
-*.log
-ner.log
+__pycache__
