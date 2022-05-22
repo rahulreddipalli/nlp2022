@@ -3,3 +3,4 @@ simpletransformers
 torch
 requests
 datetime
+flask-cors
