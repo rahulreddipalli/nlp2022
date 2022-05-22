@@ -160,3 +160,29 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Prog
 INFO:werkzeug: * Restarting with watchdog (windowsapi)
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\test.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 10:29:16] "POST /start_greeting HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\runpy.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\multiprocessing\\spawn.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\pip\\_vendor\\pyparsing.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\ner_handler.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\ner_handler.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\ner_handler.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
