@@ -1,7 +1,5 @@
 import requests
 import json
-from state_enum import STATE
-state = STATE.RUNNING
 data = {}
 counter = 0
 
@@ -19,7 +17,7 @@ response, state= get_response('http://localhost:5000/start_greeting',data)
 format_bot_response(response)
 
 
-while not state == STATE.QUIT:
+while state >0:
     data["msg"]=input("User: ")
     response, state= get_response('http://localhost:5000/get_response',data)
     format_bot_response(response)

@@ -4,4 +4,5 @@ class STATE(Enum):
     GREETING = auto()
     RUNNING=auto()
     ASKED_NAME=auto()
-    QUIT=auto()
+    ADD_ENTRY =auto()
+    QUIT=-1

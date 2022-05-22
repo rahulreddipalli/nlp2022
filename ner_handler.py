@@ -1,7 +1,7 @@
 #Try grouping potentially split up entities
 import logging
 import joblib
-
+import calendar
 
 logging.basicConfig(filename='ner.log', encoding='utf-8', level=logging.INFO)
 
@@ -12,7 +12,7 @@ from simpletransformers.ner import NERModel
 
 cuda_available = torch.cuda.is_available()
 
-model = joblib.load("ner_classifier.joblib")
+model = joblib.load("ner_classifier_nmp.joblib")
       
 new_labels_enum = {"PER":"PERSON","LOC":"GPE","ORG":"ORGANIZATION","MISC":"MISCELLANEOUS"}
 begin_ent = re.compile("B-[A-Za-z]+")
@@ -56,6 +56,7 @@ def get_entity(user_input,entity_type):
   predictions = predict_ner(user_input)
   people = [k for k in predictions.keys() if predictions[k]==entity_type]
   return people
+
 
 from datetime import date, timedelta
 import difflib
