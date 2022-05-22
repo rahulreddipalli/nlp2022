@@ -94,12 +94,9 @@ def search_by_weekday(predictions,input_split):
     target = start - timedelta(days=7)
   target_date = str(target)
 
-#weekday==-1 and 
   return target_date
 
-def show_last_entry(user_input):
-  print("What entry do you want to see")
-  print(user_input)
+def get_date(user_input):
   predictions = predict_ner(user_input)
   input_split = user_input.split(" ")
   potential_dates = list(filter(lambda v: re.match('(^(0[1-9]|[12][0-9]|3[01])(-|\/)(0[1-9]|1[0-2])(-|\/)\d{4}$)', v), input_split))
