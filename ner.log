@@ -751,3 +751,168 @@ INFO:werkzeug:127.0.0.1 - - [22/May/2022 14:42:58] "POST /get_response HTTP/1.1"
 INFO:werkzeug:127.0.0.1 - - [22/May/2022 14:43:08] "POST /get_response HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [22/May/2022 14:43:26] "POST /get_response HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [22/May/2022 14:43:32] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\test.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 15:45:13] "POST /start_greeting HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: Hi my name is Tom
+ Predicted Entities: {'Tom': 'PERSON'}
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 15:45:59] "POST /get_response HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: yes
+ Predicted Entities: {}
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 15:46:11] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\requests\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:02:02] "POST /start_greeting HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:05:50] "POST /start_greeting HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:17:37] "POST /start_greeting HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: Hi my name is nkem
+ Predicted Entities: {'nkem': 'PERSON'}
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:17:49] "POST /get_response HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: yes
+ Predicted Entities: {}
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:18:59] "[35m[1mPOST /get_response HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\json\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\intent_handler.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\intent_handler.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:34:43] "POST /start_greeting HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: My name is Nkem
+ Predicted Entities: {'Nkem': 'PERSON'}
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:36:38] "POST /get_response HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: no
+ Predicted Entities: {}
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:36:47] "POST /get_response HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: My name is actually Joe
+ Predicted Entities: {'Joe': 'PERSON'}
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:37:06] "POST /get_response HTTP/1.1" 200 -
+INFO:root:Making Prediction
+INFO:simpletransformers.ner.ner_model: Converting to features started.
+INFO:root:
+NER PREDICTION 
+User input: yes
+ Predicted Entities: {}
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:43:26] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:45:22] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:46:04] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:46:08] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:46:11] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:46:14] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:46:17] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/May/2022 16:46:20] "POST /get_response HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\logging\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\chatbot.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-975-356
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\sentiment_handler.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\state_enum.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\config.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\globals.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\helpers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\templating.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\sessions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\wrappers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\_internal.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\sansio\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\scaffold.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\json\\tag.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\requests\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\requests\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\requests\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\json\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\joblib\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\simpletransformers\\ner\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\logging\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\enum.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\joblib\\numpy_pickle.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\joblib\\compressor.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\torch\\cuda\\memory.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\torch\\cuda\\random.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\joblib\\numpy_pickle_utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\joblib\\numpy_pickle_compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\re.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\typing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\simpletransformers\\ner\\ner_model.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\difflib.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\random.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\jinja2\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\jinja2\\environment.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\werkzeug\\sansio\\response.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Local User\\OneDrive\\Documents\\Uni work\\COM3029\\nlp2022\\nlp2022\\sentiment_handler.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
