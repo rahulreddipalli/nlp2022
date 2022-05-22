@@ -3,6 +3,8 @@ from state_enum import STATE
 import ner_handler
 import intent_handler
 import pandas as pd
+from os.path import exists
+import os
 
 
 class Chatbot:
@@ -21,7 +23,6 @@ class Chatbot:
 
         elif self.state == STATE.CREATE_PROFILE_NAME:
             response = self.ask_name(user_input)
-            self.state = STATE.CONFIRM_NAME
 
         elif self.state == STATE.CONFIRM_NAME:
             response = self.confirm_name(user_input)
@@ -102,16 +103,27 @@ class Chatbot:
         response = ""
 
         if user_input.lower() == "yes":
-            users = pd.read_csv('csvs/users.csv')
-            users = users.to_numpy()
+            if exists('csvs/users.csv'):
+                users = pd.read_csv('csvs/users.csv')
+                users = users.to_numpy()
 
-            for user in users:
-                if self.users_name == user[1] and self.users_phrase == user[2]:
-                    return "Sorry {}, please could you use a different phrase?".format(self.users_name)
+                for user in users:
+                    if self.users_name == user[1] and self.users_phrase == user[2]:
+                        return "Sorry {}, please could you use a different phrase?".format(self.users_name)
+            else:
+                users = []
+                os.mkdir("csvs")
+                os.mkdir("csvs/user_csvs")
 
             self.user_id = len(users)
+
             with open('csvs/users.csv', 'a') as fd:
-                fd.write(self.user_id + "," + self.users_name + "," + self.users_phrase)
+                fd.write(str(self.user_id) + "," + self.users_name + "," + self.users_phrase)
+                fd.close()
+
+            with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
+                fd.write('date' + "," + 'entry' + "," + 'location' + "," + 'people' + "," + 'emotion')
+                fd.close()
 
             self.state = STATE.RUNNING
             response = "Thanks {}! Now that we've met, what would you like to do?".format(
@@ -130,7 +142,7 @@ class Chatbot:
 
         if names != None:
             self.users_name = names[0]
-
+        self.state = STATE.CONFIRM_NAME
         response = "Is {} your name?  yes|no".format(self.users_name)
 
         return response
