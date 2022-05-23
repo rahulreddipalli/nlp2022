@@ -5,7 +5,6 @@ counter = 0
 
 def get_response(url,data):
     response = requests.post(url,json=data)
-    print(response.text)
     response = json.loads(response.text)
     return response["response"], response["state"]
 
