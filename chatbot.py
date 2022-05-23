@@ -52,6 +52,9 @@ class Chatbot:
         elif self.state == STATE.ADD_ENTRY:
             response = self.add_entry(user_input)
 
+        elif self.state == STATE.VIEW_ENTRY:
+            response = self.view_entry(user_input)
+
         elif self.state == STATE.RUNNING:
             intent = intent_handler.predict_intent(user_input)
             # if intent_handler.get_intent(user_input)=="greeting":
@@ -61,7 +64,7 @@ class Chatbot:
 
             print(intent)
             if intent == "add_entry":
-                # self.__change_state(STATE.ADD_ENTRY)
+                self.__change_state(STATE.ADD_ENTRY)
                 response = "Tell me about your day!"
 
             elif intent == "view_entry":
@@ -93,13 +96,31 @@ class Chatbot:
         names = ner_handler.get_entity(user_input, "PERSON")
         return names if len(names) > 0 else None
 
+    def view_entry(self, user_input):
+        date = ner_handler.get_date(user_input)
+        user_data = pd.read_csv('csvs/user_csvs/{}.csv'.format(self.user_id))
+        user_data = user_data.to_numpy()
+
+        location = ""
+        people = ""
+        emotion = ""
+        for row in user_data:
+            if row[0] == date:
+                location = row[2]
+                people = row[3]
+                emotion = row[4]
+
+            return "On {}, you were at {}, you were with {} and you felt {}.".format(date, location, people, emotion)
+        return "It seems like you don't have an entry for that day."
+
     def add_entry(self, user_input):
         response = ""
-        if user_input.lower() == "yes":
-            # call database update function here maybe?
-            response = "Thanks for telling me about your day"
-            self.__change_state(STATE.RUNNING)
-            return response
+        entry = user_input.lower()
+
+        # call database update function here maybe?
+        response = "Thanks for telling me about your day"
+        self.__change_state(STATE.RUNNING)
+        return response
 
         self.new_entry = user_input
 
