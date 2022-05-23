@@ -128,7 +128,7 @@ class Chatbot:
 
             with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
                 writer = csv.writer(fd)
-                writer.writerow('date', 'entry', 'location', 'people', 'emotion')
+                writer.writerow(['date', 'entry', 'location', 'people', 'emotion'])
                 fd.close()
 
             self.__change_state(STATE.RUNNING)
