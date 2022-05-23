@@ -2,6 +2,7 @@ import chatbot_logger
 
 import torch
 import string
+import os
 
 import numpy as np
 
@@ -12,6 +13,8 @@ from keras.models import load_model
 from keras.layers import TextVectorization
 
 cuda_available = torch.cuda.is_available()
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 model = load_model("intent classifier/intents.h5")
 
