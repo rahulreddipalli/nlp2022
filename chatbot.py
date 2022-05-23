@@ -1,7 +1,8 @@
-from unicodedata import name
 from state_enum import STATE
+import chatbot_logger
 import ner_handler
 import intent_handler
+import sentiment_handler
 import pandas as pd
 from os.path import exists
 import os
@@ -10,7 +11,7 @@ import os
 class Chatbot:
     def __init__(self, name):
         self.name = name
-        self.state = STATE.GREETING
+        self.__change_state(STATE.GREETING)
         self.user_id = None
         self.users_name = None
         self.users_phrase = None
@@ -45,32 +46,34 @@ class Chatbot:
             # response = "Goodbye"
 
             if intent_handler.get_intent(user_input) == "add_entry":
-                self.state = STATE.ADD_ENTRY
+                self.__change_state(STATE.ADD_ENTRY)
                 response = "Tell me about your day!"
 
             if intent_handler.get_intent(user_input) == "view_entry":
-                self.state = STATE.VIEW_ENTRY
+                self.__change_state(STATE.VIEW_ENTRY)
                 response = "Tell me about your day!"
 
             if intent == "goodbye":
                 response = intent_handler.get_response_by_intent(intent)
                 response = response.format(self.users_name)
-                self.state == STATE.QUIT
-        return self._format_response(response)
+                self.__change_state(STATE.QUIT)
+
+        chatbot_logger.log_converstion(user_input,response)
+        return self.__format_response(response)
 
     def confirm_profile(self, user_input):
         response = ""
         if user_input == "yes":
-            self.state = STATE.ASKED_NAME
+            self.__change_state(STATE.ASKED_NAME)
             response = "Great! Please could you tell me your name?"
 
         if user_input == "no":
-            self.state = STATE.CREATE_PROFILE_NAME
+            self.__change_state(STATE.CREATE_PROFILE_NAME)
             response = "No worries, let's create a profile for you. What's your name?"
 
         return response
 
-    def _get_names(self, user_input):
+    def __get_names(self, user_input):
         names = ner_handler.get_entity(user_input, "PERSON")
         return names if len(names) > 0 else None
 
@@ -125,7 +128,7 @@ class Chatbot:
                 fd.write('date' + "," + 'entry' + "," + 'location' + "," + 'people' + "," + 'emotion')
                 fd.close()
 
-            self.state = STATE.RUNNING
+            self.__change_state(STATE.RUNNING)
             response = "Thanks {}! Now that we've met, what would you like to do?".format(
                 self.users_name)
 
@@ -135,14 +138,14 @@ class Chatbot:
         return response
 
     def ask_name(self, user_input):
-        names = self._get_names(user_input)
+        names = self.__get_names(user_input)
 
         if names is None:
             return "Sorry I didn't recognise a name? What is your name?"
 
         if names != None:
             self.users_name = names[0]
-        self.state = STATE.CONFIRM_NAME
+        self.__change_state(STATE.CONFIRM_NAME)
         response = "Is {} your name?  yes|no".format(self.users_name)
 
         return response
@@ -150,7 +153,7 @@ class Chatbot:
     def confirm_name(self, user_input):
         response = ""
         if user_input.lower() == "yes":
-            self.state = STATE.CREATE_PROFILE_PHRASE
+            self.__change_state(STATE.CREATE_PROFILE_PHRASE)
             response = "Hi {}! Can you please give me a special phrase that you'll use you access your diary?".format(
                 self.users_name)
 
@@ -165,9 +168,13 @@ class Chatbot:
     def say_greeting(self):
         response = ""
         if self.state == STATE.GREETING:
-            self.state = STATE.CHECK_IF_NEW
-            response = "Hey there! Have you used DiaryBot before?"
-        return self._format_response(response)
+            self.__change_state(STATE.CHECK_IF_NEW)
+            response = "Hey there! Have you used {} before?".format(self.name)
+        return self.__format_response(response)
 
-    def _format_response(self, response):
+    def __format_response(self, response):
         return {"response": response, "state": self.state.value}
+
+    def __change_state(self,state:STATE):
+        self.state = state
+        chatbot_logger.log_bot_state(self.state.name)
