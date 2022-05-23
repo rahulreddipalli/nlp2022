@@ -3,7 +3,6 @@ from enum import Enum, auto
 
 class STATE(Enum):
     GREETING = auto()
-    RUNNING = auto()
 
     CREATE_PROFILE_NAME = auto()
     CONFIRM_NAME = auto()
@@ -16,6 +15,9 @@ class STATE(Enum):
 
     LOGIN_PHRASE_ENTRY = auto()
     CONFIRM_LOGIN_PHRASE = auto()
+
+    RUNNING = auto()
+    ASK_WHAT_TO_DO = auto()
 
     CHECK_IF_NEW = auto()
 

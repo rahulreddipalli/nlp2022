@@ -19,6 +19,7 @@ class Chatbot:
         self.new_entry = []
 
     def get_response(self, user_input):
+        print(self.state)
         response = ""
         if self.state == STATE.CHECK_IF_NEW:
             response = self.confirm_profile(user_input)
@@ -52,24 +53,26 @@ class Chatbot:
             response = self.add_entry(user_input)
 
         elif self.state == STATE.RUNNING:
-            intent = intent_handler.get_intent(user_input)
+            intent = intent_handler.predict_intent(user_input)
             # if intent_handler.get_intent(user_input)=="greeting":
             # name=ner_handler.get_entity(user_input,"PERSON")[0]
             # response = "Hi {}! What do you want to do today".format(name)
             # response = "Goodbye"
 
-            if intent_handler.get_intent(user_input) == "add_entry":
-                self.__change_state(STATE.ADD_ENTRY)
+            print(intent)
+            if intent == "add_entry":
+                # self.__change_state(STATE.ADD_ENTRY)
                 response = "Tell me about your day!"
 
-            if intent_handler.get_intent(user_input) == "view_entry":
-                self.__change_state(STATE.VIEW_ENTRY)
-                response = "Tell me about your day!"
+            elif intent == "view_entry":
+                # self.__change_state(STATE.VIEW_ENTRY)
+                response = "You wanted to view!"
 
-            if intent == "goodbye":
-                response = intent_handler.get_response_by_intent(intent)
-                response = response.format(self.users_name)
-                self.__change_state(STATE.QUIT)
+            elif intent == "goodbye":
+                response = "bye"
+                # self.__change_state(STATE.QUIT)
+            else:
+                response = "Could not find intent"
 
         chatbot_logger.log_converstion(user_input, response)
         return self.__format_response(response)
@@ -95,7 +98,7 @@ class Chatbot:
         if user_input.lower() == "yes":
             # call database update function here maybe?
             response = "Thanks for telling me about your day"
-            self.state = STATE.RUNNING
+            self.__change_state(STATE.RUNNING)
             return response
 
         self.new_entry = user_input
@@ -140,6 +143,7 @@ class Chatbot:
         for user in users:
             if self.users_name == user[1] and self.users_phrase == user[2]:
                 self.user_id = user[0]
+                self.__change_state(STATE.RUNNING)
                 return "Hi {}! Nice to see you again! What would you like to do?".format(self.users_name)
 
         return "Sorry {}, but I don't think we've met before, or you may have given me the wrong details.".format(self.users_name)
