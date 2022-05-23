@@ -6,7 +6,7 @@ import sentiment_handler
 import pandas as pd
 from os.path import exists
 import os
-
+import csv
 
 class Chatbot:
     def __init__(self, name):
@@ -121,11 +121,14 @@ class Chatbot:
             self.user_id = len(users)
 
             with open('csvs/users.csv', 'a') as fd:
-                fd.write(str(self.user_id) + "," + self.users_name + "," + self.users_phrase)
+                writer = csv.writer(fd)
+                writer.writerow(["user_id", "user_name", "user_phrase"])
+                writer.writerow([str(self.user_id), self.users_name, self.users_phrase])
                 fd.close()
 
             with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
-                fd.write('date' + "," + 'entry' + "," + 'location' + "," + 'people' + "," + 'emotion')
+                writer = csv.writer(fd)
+                writer.writerow('date', 'entry', 'location', 'people', 'emotion')
                 fd.close()
 
             self.__change_state(STATE.RUNNING)
