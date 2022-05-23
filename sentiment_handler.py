@@ -18,7 +18,3 @@ def get_emoticon(user_input):
     emoticon = moods[sentiment]
     return sentiment,emoticon
 
-
-sentiment ,emoticon= get_emoticon("test")
-
-print("You seemed {}: {}".format(sentiment,emoticon))
