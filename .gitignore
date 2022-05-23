@@ -3,3 +3,4 @@
 *.pyc
 csvs
 .idea*
+csv_test.py
