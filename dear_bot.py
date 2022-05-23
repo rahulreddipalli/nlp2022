@@ -20,4 +20,4 @@ def start_greeting():
     
 if __name__ == '__main__' :
     bot = Chatbot("DearBot")  
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
