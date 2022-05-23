@@ -8,6 +8,7 @@ from os.path import exists
 import os
 import csv
 
+
 class Chatbot:
     def __init__(self, name):
         self.name = name
@@ -22,6 +23,18 @@ class Chatbot:
         if self.state == STATE.CHECK_IF_NEW:
             response = self.confirm_profile(user_input)
 
+        # PROFILE LOGIN
+        elif self.state == STATE.LOGIN_NAME_ENTRY:
+            response = self.ask_login_name(user_input)
+
+        elif self.state == STATE.CONFIRM_LOGIN_NAME:
+            response = self.confirm_login_name(user_input)
+
+        elif self.state == STATE.LOGIN_PHRASE_ENTRY:
+            response = self.ask_login_phrase(user_input)
+
+
+        # PROFILE CREATION
         elif self.state == STATE.CREATE_PROFILE_NAME:
             response = self.ask_name(user_input)
 
@@ -58,13 +71,13 @@ class Chatbot:
                 response = response.format(self.users_name)
                 self.__change_state(STATE.QUIT)
 
-        chatbot_logger.log_converstion(user_input,response)
+        chatbot_logger.log_converstion(user_input, response)
         return self.__format_response(response)
 
     def confirm_profile(self, user_input):
         response = ""
         if user_input == "yes":
-            self.__change_state(STATE.ASKED_NAME)
+            self.__change_state(STATE.LOGIN_NAME_ENTRY)
             response = "Great! Please could you tell me your name?"
 
         if user_input == "no":
@@ -90,6 +103,47 @@ class Chatbot:
         response = "Today, you said you did this:\n" + "You also said you did this:".join(self.new_entry)
 
         return response
+
+    def ask_login_name(self, user_input):
+        names = self.__get_names(user_input)
+
+        if names is None:
+            return "Sorry I didn't recognise a name? What is your name?"
+
+        if names != None:
+            self.users_name = names[0]
+        self.__change_state(STATE.CONFIRM_LOGIN_NAME)
+        response = "Is {} your name?  yes|no".format(self.users_name)
+
+        return response
+
+    def confirm_login_name(self, user_input):
+        response = ""
+        if user_input.lower() == "yes":
+            self.__change_state(STATE.LOGIN_PHRASE_ENTRY)
+            response = "Hi {}! Can you please enter your special phrase?".format(
+                self.users_name)
+
+        elif user_input.lower() == "no":
+            response = "What is your name then?"
+
+        return response
+
+    def ask_login_phrase(self, user_input):
+        self.users_phrase = user_input
+
+        if self.users_phrase is None:
+            return "Sorry I didn't recognise a phrase? Can you give me a special phrase?"
+
+        users = pd.read_csv('csvs/users.csv')
+        users = users.to_numpy()
+        for user in users:
+            if self.users_name == user[1] and self.users_phrase == user[2]:
+                self.user_id = user[0]
+                return "Hi {}! Nice to see you again! What would you like to do?".format(self.users_name)
+
+        return "Sorry {}, but I don't think we've met before, or you may have given me the wrong details.".format(self.users_name)
+
 
     def ask_phrase(self, user_input):
         response = ""
@@ -165,7 +219,7 @@ class Chatbot:
 
         return response
 
-    def choose_what_to_do(self,user_input):
+    def choose_what_to_do(self, user_input):
         pass
 
     def say_greeting(self):
@@ -178,6 +232,6 @@ class Chatbot:
     def __format_response(self, response):
         return {"response": response, "state": self.state.value}
 
-    def __change_state(self,state:STATE):
+    def __change_state(self, state: STATE):
         self.state = state
         chatbot_logger.log_bot_state(self.state.name)
