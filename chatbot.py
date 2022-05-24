@@ -68,7 +68,7 @@ class Chatbot:
                 self.__change_state(STATE.ADD_ENTRY)
                 response = "Sure, tell me about your day!"
 
-            elif intent == "view_entry":
+            elif intent == "entry_query":
                 response = self.view_entry(user_input)
 
             elif intent == "goodbye":
@@ -109,7 +109,9 @@ class Chatbot:
                 people = row[3]
                 emotion = row[4]
 
-            return "On {}, you were at {}, you were with {} and you felt {}.\nIs there anything else you'd like to do?".format(date, location, people, emotion)
+            return "On {}, you were at {}, you were with {} and you felt {}.\nIs " \
+                   "there anything else you'd like to do?".format(date, location, people, emotion)
+
         return "It seems like you don't have an entry for that day. What else would you like to do?"
 
     def add_entry(self, user_input):
