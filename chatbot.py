@@ -50,8 +50,14 @@ class Chatbot:
         elif self.state == STATE.CONFIRM_PHRASE:
             response = self.confirm_phrase(user_input)
 
+        elif self.state == STATE.CONFIRM_OVERWRITE:
+            response = self.confirm_overwrite(user_input)
+
         elif self.state == STATE.ADD_ENTRY:
-            response = self.add_entry(user_input)
+            response = self.add_entry(user_input, False)
+
+        elif self.state == STATE.ADD_OVERWRITE:
+            response = self.add_entry(user_input, True)
 
         elif self.state == STATE.VIEW_ENTRY:
             response = self.view_entry(user_input)
@@ -65,8 +71,8 @@ class Chatbot:
 
             print(intent)
             if intent == "add_entry":
-                self.__change_state(STATE.ADD_ENTRY)
-                response = "Sure, tell me about your day!"
+                self.__change_state(STATE.CONFIRM_OVERWRITE)
+                response = self.check_if_exists(user_input)
 
             elif intent == "entry_query":
                 response = self.view_entry(user_input)
@@ -118,8 +124,37 @@ class Chatbot:
 
         return "It seems like you don't have an entry for that day. What else would you like to do?"
 
-    def add_entry(self, user_input):
+
+    def confirm_overwrite(self, user_input):
         response = ""
+        # intent = intent_handler.predict_intent(user_input)
+        intent = "yes"
+        if intent == "yes":
+            self.__change_state(STATE.ADD_OVERWRITE)
+            response = "Sure, tell me about your day!"
+            print("RESPONSE ASSIGNED")
+        elif intent == "no":
+            self.__change_state(STATE.RUNNING)
+            response = "No problem, let's leave your diary as it is. What would you like to do now?"
+        else:
+            response = "Sorry, please could you confirm if you want to overwrite today's entry?"
+
+        return response
+
+    def check_if_exists(self, user_input):
+        response = ""
+        user_data = pd.read_csv('csvs/user_csvs/{}.csv'.format(self.user_id))
+        user_data = user_data.to_numpy()
+        for row in user_data:
+            if str(row[0]) == str(date.today()):
+                self.__change_state(STATE.CONFIRM_OVERWRITE)
+                return "It seems that you've already got an entry in your diary for today. Would you like to overwrite it?"
+
+        self.__change_state(STATE.ADD_ENTRY)
+        return "Tell me about your day!"
+
+    def add_entry(self, user_input, overwrite):
+
         entry_ner = ner_handler.predict_ner(user_input)
 
         for item in entry_ner:
@@ -135,6 +170,12 @@ class Chatbot:
                 people.append(key)
 
         emotion, emoticon = sentiment_handler.get_emoticon(user_input)
+
+        if overwrite:
+            f = "csvs/user_csvs/{}.csv".format(self.user_id)
+            user_df = pd.read_csv(f)
+            user_df = user_df.iloc[:-1, :]
+            user_df.to_csv(f)
 
         with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
             writer = csv.writer(fd)
