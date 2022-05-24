@@ -81,14 +81,16 @@ class Chatbot:
 
     def confirm_profile(self, user_input):
         response = ""
-        if user_input == "yes":
+        intent = intent_handler.predict_intent(user_input)
+        if intent == "yes":
             self.__change_state(STATE.LOGIN_NAME_ENTRY)
             response = "Great! Please could you tell me your name?"
 
-        if user_input == "no":
+        if intent == "no":
             self.__change_state(STATE.CREATE_PROFILE_NAME)
             response = "No worries, let's create a profile for you. What's your name?"
-
+        else:
+            response = "Sorry, please could you confirm if you've used DearBot before?"
         return response
 
     def __get_names(self, user_input):
@@ -256,19 +258,24 @@ class Chatbot:
         if names != None:
             self.users_name = names[0]
         self.__change_state(STATE.CONFIRM_NAME)
-        response = "Is {} your name?  yes|no".format(self.users_name)
+        response = "Is {} your name?".format(self.users_name)
 
         return response
 
     def confirm_name(self, user_input):
         response = ""
-        if user_input.lower() == "yes":
+        intent = intent_handler.predict_intent(user_input)
+        if intent == "yes":
             self.__change_state(STATE.CREATE_PROFILE_PHRASE)
             response = "Hi {}! Can you please give me a special phrase that you'll use you access your diary?".format(
                 self.users_name)
 
-        elif user_input.lower() == "no":
+        elif intent == "no":
+            self.__change_state(STATE.CREATE_PROFILE_NAME)
             response = "What is your name then?"
+
+        else:
+            return "Sorry, please could you confirm if {} is your name?".format(self.users_name)
 
         return response
 
