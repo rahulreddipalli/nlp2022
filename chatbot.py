@@ -118,16 +118,26 @@ class Chatbot:
         response = ""
         entry_ner = ner_handler.predict_ner(user_input)
 
-        location = []
+        for item in entry_ner:
+            print(item)
+
+        locations = []
         people = []
         emotion = []
 
+        for key in entry_ner:
+            if entry_ner[key] == 'GPE':
+                locations.append(key)
+            if entry_ner[key] == 'PERSON':
+                people.append(key)
+
         with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
             writer = csv.writer(fd)
-            writer.writerow([str(date.today()), user_input, location, people, emotion])
+            writer.writerow([str(date.today()), user_input, locations, people, emotion])
             fd.close()
 
-        response = "Thanks for telling me about your day. This was your entry:\n{}".format(user_input)
+        response = "Thanks for telling me about your day. This was your entry:\n{}\n" \
+                   "Is there anything else you'd like to do?".format(user_input)
         self.__change_state(STATE.RUNNING)
         return response
 
