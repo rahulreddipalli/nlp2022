@@ -3,6 +3,8 @@ from chatbot import Chatbot
 import chatbot_logger
 import json
 
+bot_name = "DearBot"
+print("Starting: "+bot_name)
 app = Flask(__name__)
 @app.post('/get_response')
 def get_response():
@@ -19,5 +21,5 @@ def start_greeting():
     return json.dumps(response)
     
 if __name__ == '__main__' :
-    bot = Chatbot("DearBot")  
+    bot = Chatbot(bot_name) 
     app.run(debug=True, use_reloader=False)
