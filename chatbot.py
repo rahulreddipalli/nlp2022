@@ -7,6 +7,7 @@ import pandas as pd
 from os.path import exists
 import os
 import csv
+from datetime import date, timedelta
 
 
 class Chatbot:
@@ -110,23 +111,39 @@ class Chatbot:
                 people = row[3]
                 emotion = row[4]
 
-            return "On {}, you were at {}, you were with {} and you felt {}.".format(date, location, people, emotion)
-        return "It seems like you don't have an entry for that day."
+            return "On {}, you were at {}, you were with {} and you felt {}.\nIs there anything else you'd like to do?".format(date, location, people, emotion)
+        return "It seems like you don't have an entry for that day. What else would you like to do?"
 
     def add_entry(self, user_input):
         response = ""
-        entry = user_input.lower()
+        entry_ner = ner_handler.predict_ner(user_input)
 
-        # call database update function here maybe?
-        response = "Thanks for telling me about your day"
+        for item in entry_ner:
+            print(item)
+
+        locations = []
+        people = []
+        emotion = []
+
+        for key in entry_ner:
+            if entry_ner[key] == 'GPE':
+                locations.append(key)
+            if entry_ner[key] == 'PERSON':
+                people.append(key)
+
+        with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
+            writer = csv.writer(fd)
+            writer.writerow([str(date.today()), user_input, locations, people, emotion])
+            fd.close()
+
+        response = "Thanks for telling me about your day. This was your entry:\n{}\n" \
+                   "Is there anything else you'd like to do?".format(user_input)
         self.__change_state(STATE.RUNNING)
         return response
 
-        self.new_entry = user_input
-
-        response = "Today, you said you did this:\n" + "You also said you did this:".join(self.new_entry)
-
-        return response
+    def goodbye(self):
+        self.__change_state(STATE.GREETING)
+        return "Thanks for using {}! Goodbye!".format(self.name)
 
     def ask_login_name(self, user_input):
         names = self.__get_names(user_input)
