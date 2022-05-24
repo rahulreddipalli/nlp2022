@@ -161,13 +161,18 @@ class Chatbot:
 
     def confirm_login_name(self, user_input):
         response = ""
-        if user_input.lower() == "yes":
+        intent = intent_handler.predict_intent(user_input)
+        if intent == "yes":
             self.__change_state(STATE.LOGIN_PHRASE_ENTRY)
             response = "Hi {}! Can you please enter your special phrase?".format(
                 self.users_name)
 
-        elif user_input.lower() == "no":
+        elif intent == "no":
+            self.__change_state(STATE.LOGIN_NAME_ENTRY)
             response = "What is your name then?"
+
+        else:
+            response = "Sorry, please could you confirm if {} is your name?".format(self.users_name)
 
         return response
 
@@ -185,24 +190,25 @@ class Chatbot:
                 self.__change_state(STATE.RUNNING)
                 return "Hi {}! Nice to see you again! What would you like to do?".format(self.users_name)
 
-        return "Sorry {}, but I don't think we've met before, or you may have given me the wrong details.".format(self.users_name)
+        self.__change_state(STATE.CHECK_IF_NEW)
+        return "Sorry {}, but I don't think we've met before, or you may have given me the wrong details. Are you sure we've met before?".format(self.users_name)
 
 
     def ask_phrase(self, user_input):
         response = ""
         self.users_phrase = user_input
-
         if self.users_phrase is None:
-            return "Sorry I didn't recognise a phrase? Can you give me a special phrase?"
+            return "Sorry I didn't get a phrase. Can you give me a special phrase?"
 
-        response = "Is {} the phrase you'd like to use?  yes|no".format(self.users_phrase)
+        response = "Is {} the phrase you'd like to use?".format(self.users_phrase)
 
         return response
 
     def confirm_phrase(self, user_input):
         response = ""
+        intent = intent_handler.predict_intent(user_input)
 
-        if user_input.lower() == "yes":
+        if intent == "yes":
             if exists('csvs/users.csv'):
                 users = pd.read_csv('csvs/users.csv')
                 users = users.to_numpy()
@@ -232,8 +238,12 @@ class Chatbot:
             response = "Thanks {}! Now that we've met, what would you like to do?".format(
                 self.users_name)
 
-        elif user_input.lower() == "no":
+        elif intent == "no":
+            self.__change_state(STATE.CREATE_PROFILE_PHRASE)
             response = "What would you like your phrase to be instead?"
+
+        else:
+            return "Sorry, please could you confirm if you want to use the phrase {}?".format(self.users_phrase)
 
         return response
 
