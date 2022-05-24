@@ -45,7 +45,6 @@ class Chatbot:
 
         elif self.state == STATE.CREATE_PROFILE_PHRASE:
             response = self.ask_phrase(user_input)
-            self.state = STATE.CONFIRM_PHRASE
 
         elif self.state == STATE.CONFIRM_PHRASE:
             response = self.confirm_phrase(user_input)
@@ -245,8 +244,8 @@ class Chatbot:
         if self.users_phrase is None:
             return "Sorry I didn't get a phrase. Can you give me a special phrase?"
 
+        self.state = STATE.CONFIRM_PHRASE
         response = "Is {} the phrase you'd like to use?".format(self.users_phrase)
-
         return response
 
     def confirm_phrase(self, user_input):
@@ -260,6 +259,7 @@ class Chatbot:
 
                 for user in users:
                     if self.users_name == user[1] and self.users_phrase == user[2]:
+                        self.__change_state(STATE.CREATE_PROFILE_PHRASE)
                         return "Sorry {}, please could you use a different phrase?".format(self.users_name)
             else:
                 users = []
