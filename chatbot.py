@@ -111,9 +111,10 @@ class Chatbot:
                 location = row[2]
                 people = row[3]
                 emotion = row[4]
+                emoticon = row[5]
 
-            return "On {}, you were at {}, you were with {} and you felt {}.\nIs " \
-                   "there anything else you'd like to do?".format(date, location, people, emotion)
+            return "On {}, you were at {}, you were with {} and you felt {} {}.\nIs " \
+                   "there anything else you'd like to do?".format(date, location, people, emotion, emoticon)
 
         return "It seems like you don't have an entry for that day. What else would you like to do?"
 
@@ -133,11 +134,11 @@ class Chatbot:
             if entry_ner[key] == 'PERSON':
                 people.append(key)
 
-        emotion = sentiment_handler.predict_sentiment(user_input)
+        emotion, emoticon = sentiment_handler.get_emoticon(user_input)
 
         with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
             writer = csv.writer(fd)
-            writer.writerow([str(date.today()), user_input, locations, people, emotion])
+            writer.writerow([str(date.today()), user_input, locations, people, emotion, emoticon])
             fd.close()
 
         response = "Thanks for telling me about your day. This was your entry:\n{}\n" \
@@ -158,7 +159,7 @@ class Chatbot:
         if names != None:
             self.users_name = names[0]
         self.__change_state(STATE.CONFIRM_LOGIN_NAME)
-        response = "Is {} your name?  yes|no".format(self.users_name)
+        response = "Is {} your name?".format(self.users_name)
 
         return response
 
@@ -234,7 +235,7 @@ class Chatbot:
 
             with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
                 writer = csv.writer(fd)
-                writer.writerow(['date', 'entry', 'location', 'people', 'emotion'])
+                writer.writerow(['date', 'entry', 'location', 'people', 'emotion', 'emoticon'])
                 fd.close()
 
             self.__change_state(STATE.RUNNING)
