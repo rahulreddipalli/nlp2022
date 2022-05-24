@@ -123,13 +123,14 @@ class Chatbot:
 
         locations = []
         people = []
-        emotion = []
 
         for key in entry_ner:
             if entry_ner[key] == 'GPE':
                 locations.append(key)
             if entry_ner[key] == 'PERSON':
                 people.append(key)
+
+        emotion = sentiment_handler.predict_sentiment(user_input)
 
         with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
             writer = csv.writer(fd)
