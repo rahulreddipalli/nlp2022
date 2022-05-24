@@ -66,17 +66,15 @@ class Chatbot:
             print(intent)
             if intent == "add_entry":
                 self.__change_state(STATE.ADD_ENTRY)
-                response = "Tell me about your day!"
+                response = "Sure, tell me about your day!"
 
             elif intent == "view_entry":
-                # self.__change_state(STATE.VIEW_ENTRY)
-                response = "You wanted to view!"
+                response = self.view_entry(user_input)
 
             elif intent == "goodbye":
-                response = "bye"
-                # self.__change_state(STATE.QUIT)
+                response = self.goodbye()
             else:
-                response = "Could not find intent"
+                response = "Sorry I don't understand what you're trying to do."
 
         chatbot_logger.log_converstion(user_input, response)
         return self.__format_response(response)
