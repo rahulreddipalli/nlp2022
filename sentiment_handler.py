@@ -1,20 +1,33 @@
-import random as rand
+from transformers import pipeline
 import chatbot_logger
-moods = {"happy":":D","sad":":C","anxious":":z","angry":">:C","tired":"(z_Z)","bored":":|"}
+import os
 
-class Model:
-    def predict(self,user_input):
-        return rand.choice(list(moods.keys()))
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-model = Model()
+classifier = pipeline("text-classification", model='model')
+
+moods = {
+    "happy": ":D",
+    "sad": ":C",
+    "anxious": ":z",
+    "angry": ">:C",
+    "tired": "(z_Z)",
+    "bored": ":|",
+    "neutral": ":L"}
+
+
+prediction = classifier("I love using transformers. The best part is wide range of support and its easy to use", )
+
 
 def predict_sentiment(user_input):
-    sentiment = model.predict(user_input)
-    chatbot_logger.log_prediction("Making Sentiment Prediction",user_input,{sentiment:0.58})
+    sent_pred = classifier(user_input)
+    sentiment = sent_pred[0]['label']
+    chatbot_logger.log_prediction("Making Sentiment Prediction", user_input, sentiment)
     return sentiment
+
 
 def get_emoticon(user_input):
     sentiment = predict_sentiment(user_input)
     emoticon = moods[sentiment]
-    return sentiment,emoticon
+    return sentiment, emoticon
 
