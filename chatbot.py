@@ -82,11 +82,12 @@ class Chatbot:
     def confirm_profile(self, user_input):
         response = ""
         intent = intent_handler.predict_intent(user_input)
+        print(intent)
         if intent == "yes":
             self.__change_state(STATE.LOGIN_NAME_ENTRY)
             response = "Great! Please could you tell me your name?"
 
-        if intent == "no":
+        elif intent == "no":
             self.__change_state(STATE.CREATE_PROFILE_NAME)
             response = "No worries, let's create a profile for you. What's your name?"
         else:
