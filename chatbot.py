@@ -267,7 +267,7 @@ class Chatbot:
 
         if intent in ["cancel", "goodbye", "no"]:
             self.__change_state(STATE.GREETING)
-            response = "Sorry, I can't help you without your name! Goodbye"
+            response = "Sorry, I can't help you without your name! Goodbye!"
         else:
             names = self.__get_names(user_input)
 
