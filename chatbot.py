@@ -63,10 +63,6 @@ class Chatbot:
 
         elif self.state == STATE.RUNNING:
             intent = intent_handler.predict_intent(user_input)
-            # if intent_handler.get_intent(user_input)=="greeting":
-            # name=ner_handler.get_entity(user_input,"PERSON")[0]
-            # response = "Hi {}! What do you want to do today".format(name)
-            # response = "Goodbye"
 
             print(intent)
             if intent == "add_entry":
@@ -108,26 +104,35 @@ class Chatbot:
         user_data = pd.read_csv('csvs/user_csvs/{}.csv'.format(self.user_id))
         user_data = user_data.to_numpy()
 
+        entry = ""
         location = ""
         people = ""
         emotion = ""
+        emoticon = ""
         for row in user_data:
+            print(row)
             if row[0] == date:
-                location = row[2]
-                people = row[3]
+                entry = row[1]
+                location = self.__lst_to_list(row[2])
+                people = self.__lst_to_list(row[3])
                 emotion = row[4]
                 emoticon = row[5]
 
-            return "On {}, you were at {}, you were with {} and you felt {} {}.\nIs " \
-                   "there anything else you'd like to do?".format(date, location, people, emotion, emoticon)
+            summary = "Here's your summary for {}\n".format(date) +\
+            "You went to: {}\n".format(location) +\
+            "You were with: {}\n".format(people) +\
+            "Overall on this day you felt {} {}\n\n".format(emotion, emoticon) +\
+            "This was your full entry for the day: {}\n".format(entry) +\
+            "What else would you like to do today?"
+
+            return summary
 
         return "It seems like you don't have an entry for that day. What else would you like to do?"
 
 
     def confirm_overwrite(self, user_input):
         response = ""
-        # intent = intent_handler.predict_intent(user_input)
-        intent = "yes"
+        intent = intent_handler.predict_intent(user_input)
         if intent == "yes":
             self.__change_state(STATE.ADD_OVERWRITE)
             response = "Sure, tell me about your day!"
@@ -338,3 +343,8 @@ class Chatbot:
     def __change_state(self, state: STATE):
         self.state = state
         chatbot_logger.log_bot_state(self.state.name)
+
+    def __lst_to_list(self,str_list):
+        new_val = str_list.replace('\'', '')
+        return new_val.strip('][')
+
