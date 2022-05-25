@@ -24,6 +24,8 @@ class STATE(Enum):
     ADD_ENTRY = auto()
     ADD_OVERWRITE = auto()
     VIEW_ENTRY = auto()
+    CONFIRM_VIEW_ENTRY = auto()
 
     CONFIRM_OVERWRITE = auto()
+    CONFIRM_EXIT = auto()
     QUIT = -1

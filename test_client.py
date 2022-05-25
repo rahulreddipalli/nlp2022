@@ -16,9 +16,9 @@ response, state= get_response('http://localhost:5000/start_greeting',data)
 format_bot_response(response)
 
 
-while state >0:
-    data["msg"]=input("User: ")
-    response, state= get_response('http://localhost:5000/get_response',data)
+while state > 0:
+    data["msg"] = input("User: ")
+    response, state = get_response('http://localhost:5000/get_response', data)
     format_bot_response(response)
     if response[-8:] == "Goodbye!":
         break
