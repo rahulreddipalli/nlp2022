@@ -1,0 +1,1054 @@
+query,intent
+how's everything,greeting
+how are things going,greeting
+"hello, anyone there",greeting
+are you okay right now,greeting
+are you doing okay,greeting
+how's it going right now,greeting
+ahoy hoy,greeting
+hey there!,greeting
+how is everything with you,greeting
+hey hey!,greeting
+how have you been doing,greeting
+it's nice to see you,greeting
+hello there!,greeting
+how is it going,greeting
+how are things with you,greeting
+hiya!,greeting
+what's up,greeting
+how're you doing,greeting
+it's good to see you,greeting
+is everything going okay,greeting
+how is everything going,greeting
+how goes it,greeting
+"hello, ai",greeting
+"hey, ai",greeting
+"wake up, ai",greeting
+good day,greeting
+greetings to you,greeting
+"hello, friend",greeting
+whats up with you,greeting
+hey there fellow,greeting
+whats up,greeting
+"yo, hows it going",greeting
+how are things for you,greeting
+are things going well for you,greeting
+hello siri,greeting
+hi there alexa,greeting
+"how are you doing, ai",greeting
+ai how are you doing today,greeting
+"how are you doing today, ai",greeting
+how is my ai doing,greeting
+ai how are you doing on this fine day,greeting
+heller,greeting
+so how is everything,greeting
+how are you this day,greeting
+hi how are you,greeting
+how is everything going for you,greeting
+hi how is everything,greeting
+well hello,greeting
+just wanted to say hi,greeting
+how is your day,greeting
+why hello,greeting
+are you well,greeting
+hola,greeting
+good to see you,greeting
+how've you been feeling,greeting
+how are things,greeting
+are you doing well,greeting
+good evening,greeting
+yo,greeting
+"ai, how are you feeling",greeting
+how is the ai doing,greeting
+"ai, how are you doing",greeting
+hi ai,greeting
+have you been good,greeting
+is everything ok with you,greeting
+how have you been,greeting
+are you doing ok,greeting
+how are you,greeting
+how's life,greeting
+what's up with you,greeting
+what's going on,greeting
+how's it going with you,greeting
+how's ife treating you,greeting
+hello how's it going,greeting
+how are you today,greeting
+can you tell me how you're doing today,greeting
+how are you this fine day,greeting
+how are things treating you,greeting
+aloha,greeting
+are you feeling okay,greeting
+how do you feel,greeting
+bonjour,greeting
+how are things going for you,greeting
+what do you feel like doing,greeting
+"hello, what's up",greeting
+hey how's life,greeting
+hi there,greeting
+hey how's it hanging,greeting
+tell me how you've been,greeting
+how is life treating you,greeting
+"hi there, how are things",greeting
+"hello, how are you",greeting
+"hey, how's it going",greeting
+"hello, are you doing alright",greeting
+hi! are you doing okay,greeting
+what's happening,greeting
+hey what's up,greeting
+"why, hello bandit",greeting
+"howdy, what's new",greeting
+salutations!,greeting
+"please cancel what you are doing, i've changed my mind",goodbye
+"never mind, cancel that",goodbye
+"stop working on it, i need something else",goodbye
+"cancel",goodbye
+"forget it, i do not need it anymore",goodbye
+cancel that last thing,goodbye
+stop,goodbye
+stop and go back,goodbye
+ai stop talking,goodbye
+quiet now,goodbye
+shhhh,goodbye
+how do i make you stop talking,goodbye
+can you be quiet please,goodbye
+please stop doing what i asked,goodbye
+please be quiet,goodbye
+i would like you to stop what you were doing,goodbye
+please cancel that last command,goodbye
+can you stop what you were doing,goodbye
+can you stop,goodbye
+shut up!,goodbye
+i need you to stop talking now,goodbye
+i want you to quit the action,goodbye
+discontinue please,goodbye
+i don't want you to speak any more for now,goodbye
+discontinue your current task,goodbye
+abort please,goodbye
+quit the current action please,goodbye
+forget my previous command,goodbye
+abort the current action,goodbye
+actually forget that i don't need it,goodbye
+quit what you are doing,goodbye
+"sorry, you can actually stop that",goodbye
+"i actually don't want this anymore, please abort",goodbye
+please cancel your present task,goodbye
+"that's enough, don't say anymore please",goodbye
+i want you to stop your present action,goodbye
+stop talking please,goodbye
+"what you are doing is not actually helpful, please cancel the action",goodbye
+please stop,goodbye
+cancel action,goodbye
+please cancel the input,goodbye
+"ai, stop talking",goodbye
+"ai, shut up",goodbye
+"ai, stop!",goodbye
+please be quiet now,goodbye
+terminate,goodbye
+halt,goodbye
+would you stop talking please,goodbye
+please abandon the current job,goodbye
+please abort the current task,goodbye
+terminate current process,goodbye
+i want you to cancel the current action,goodbye
+abort,goodbye
+please stop doing that,goodbye
+abort running program,goodbye
+don't continue with what you're doing,goodbye
+oh shut the hell up would you,goodbye
+destroy process,goodbye
+please cancel that last task,goodbye
+please refrain from carrying out the current task,goodbye
+"ai, cancel that last request",goodbye
+do not complete the task that i gave you,goodbye
+"ai, please stop your current task",goodbye
+"actually, cancel that command",goodbye
+"nevermind, forget that",goodbye
+"actually, stop it",goodbye
+forget it,goodbye
+cancel that,goodbye
+don't do this process,goodbye
+undo,goodbye
+cancel current process,goodbye
+undo this process,goodbye
+just shut up,goodbye
+stop that,goodbye
+cancel that input,goodbye
+"never mind, dont want to do anything anymore",goodbye
+never mind,goodbye
+stop doing that,goodbye
+halt that immediately,goodbye
+stop the process happening now,goodbye
+oops cancel that,goodbye
+can you stop,goodbye
+could you stop talking for a second,goodbye
+could you stop please,goodbye
+can you switch off,goodbye
+can you stop speaking,goodbye
+can you please cancel,goodbye
+can you end the task,goodbye
+scratch,goodbye
+refrain from talking,goodbye
+halt the process,goodbye
+no more talking,goodbye
+i advise you to quit talking,goodbye
+yep,yes
+that is affirmative,yes
+what you just said is true,yes
+that is not false,yes
+that is a fact,yes
+i agree with the truth of what you just said,yes
+i believe what you just said is true,yes
+that would be great,yes
+that would be awesome,yes
+that is totally true,yes
+oh yes,yes
+yes that is right,yes
+that is a yes,yes
+that seems true,yes
+positive,yes
+TRUE,yes
+very true,yes
+that will be true,yes
+that appears true,yes
+that is true,yes
+it is true,yes
+that is right,yes
+that statement was correct,yes
+i think that's true,yes
+that is accurate,yes
+"yes, that is it",yes
+correct,yes
+the answer is yes,yes
+all right,yes
+it's indeed true,yes
+that's a yes from me,yes
+yes you are correct,yes
+that's a definite yes,yes
+yes that's it,yes
+i vote yes,yes
+that is correct,yes
+"yes, that is true",yes
+"yep, that's right",yes
+yeah that's what i want,yes
+you got it,yes
+"yeah that's right, so true",yes
+true is my response,yes
+"yes, that's affirmative",yes
+"yes, you got it",yes
+absolutely!,yes
+do that,yes
+absolutely correct,yes
+confirm,yes
+"yes, i'd really like that alot",yes
+"agreed, that's valid",yes
+"affirmative, go ahead",yes
+yes that's correct,yes
+"yeah, that's how it is",yes
+"yeah, that's right",yes
+of course,yes
+that's the truth,yes
+exactly right,yes
+"yes, that's accurate",yes
+"yes, that is accurate",yes
+"yes, that's what i want",yes
+"yes, that is a fact",yes
+"yes, that is correct",yes
+"yes, that's confirmed",yes
+indeed,yes
+yes,yes
+uh-huh,yes
+"correct, that's true",yes
+"yes, that's correct",yes
+yeah,yes
+yeap,yes
+ok,yes
+sure thing,yes
+yes you are right,yes
+yes you are,yes
+yes i do like that,yes
+yes that is correct,yes
+yes i am,yes
+i think it's true,yes
+that would be yes,yes
+that would be true,yes
+i believe that's true,yes
+uh huh,yes
+"yep, that's true",yes
+"yes, that is actually true",yes
+"yes, that's it",yes
+"yes, that is right",yes
+"correct, it is affirmative",yes
+the answer to that is a resounding yes,yes
+i can confirm it is affirmative,yes
+my response to that is yes,yes
+i have to say affirmative on that one,yes
+i would have to say yes as my answer,yes
+the answer to that is affirmative,yes
+"that is true, yes",yes
+it is definitely affirmative,yes
+is is very much true,yes
+it is a true,yes
+its a for sure true,yes
+yes sir,yes
+it's true,yes
+"no, that's incorrect",no
+that's not true,no
+"that is not true, it's false",no
+no way,no
+not really,no
+naw,no
+nay,no
+i must say no,no
+i think not,no
+that is actually false,no
+i gotta say no,no
+no thanks,no
+no is the answer,no
+i don't think so,no
+it's a no,no
+i think it is false,no
+not true,no
+that is not true,no
+not at all,no
+that turns out to be false,no
+"please, no",no
+not that,no
+definitely not,no
+i would have to say the answer to that is no,no
+i say no to that question,no
+"no, that is my response",no
+"i don't believe that is possible, it is false",no
+i would say that the statement is definitely false,no
+i am afraid that that is not the case,no
+"no, that information is wrong",no
+that is a completely false statement,no
+that would be a no,no
+"i do not think that is true, so i would say it is a false statement",no
+"incorrect, it is certainly a false statement",no
+i do not believe that that is correct,no
+the answer is definitely no,no
+"sorry, that is not true",no
+that's a negative,no
+no!,no
+that's not right,no
+"no, don't do that",no
+"i don't like that, no",no
+no way!,no
+"oh hell no, that'd be terrible!",no
+that's inaccurate,no
+that's not what i want!,no
+that's completely false,no
+that's incorrect!,no
+that's totally wrong!,no
+that's a hard no from me,no
+no don't do that!,no
+no that is not right,no
+false for sure,no
+that's definitely false,no
+"nope, that's false",no
+"no, that is not right",no
+"no, that is inaccurate",no
+"no, that can't be right",no
+that is untrue,no
+i disagree that is false,no
+what you just said is false,no
+that is erroneous,no
+no that's wrong,no
+that isn't the right answer,no
+the information is wrong,no
+that is not correct,no
+that is not right,no
+that is wrong,no
+i'll pass,no
+not that one,no
+"that's not right, so no",no
+the answer is false,no
+"no, that is not right at all",no
+that is overwhelmingly false,no
+that's not right it's false,no
+i say negative,no
+negative for sure,no
+nope,no
+no thank you,no
+that is not the case,no
+no that isn't the case,no
+no that isn't it,no
+no that isn't correct,no
+"that would be ""no",no
+you are wrong,no
+no that is wrong,no
+that is false,no
+negative,no
+what you just said is wrong,no
+that’s actually wrong,no
+that’s not correct,no
+that’s incorrect,no
+are you sure i don’t think that’s correct,no
+that'd be a no,no
+nada,no
+the answer is no,no
+i think that's false,no
+i believe that to be false,no
+it seems not,no
+that would be false,no
+i want to create a new entry,add_entry
+let's create an entry,add_entry
+i need to create an entry,add_entry
+let's have a chat,add_entry
+i want to chat,add_entry
+i want to add to the diary,add_entry
+can we add to my diary,add_entry
+can we have a chat about my day,add_entry
+i want to add my day to the diary,add_entry
+let's talk about my day,add_entry
+i need to add to the diary,add_entry
+i want to create a new diary entry,add_entry
+i want to create a new diary entry,add_entry
+let's discuss my day,add_entry
+can we talk about my day,add_entry
+can we have a chat,add_entry
+let's have a conversation,add_entry
+ i want to have a conversation,add_entry
+i want to begin a new diary entry,add_entry
+i want to begin a conversation,add_entry
+i want to talk about my day,add_entry
+let's talk,add_entry
+let's chat,add_entry
+i wanna add to my diary,add_entry
+i wanna add an entry,add_entry
+i wanna talk,add_entry
+i wanna chat,add_entry
+let's begin a new entry,add_entry
+please can i add an entry,add_entry
+please can i talk about my day,add_entry
+i want to talk about what happened today,add_entry
+i want to add what happened today to my diary,add_entry
+lets discuss what happened today,add_entry
+i want to talk about today,add_entry
+can we go over my day,add_entry
+can we summarise my day,add_entry
+i want to log my day ,add_entry
+i want to log what happened today,add_entry
+let's have a conversation about my day,add_entry
+i want to have a conversation,add_entry
+let's discuss what happened today,add_entry
+can we talk,add_entry
+i'd like to create an entry,add_entry
+i need to talk to you,add_entry
+let's talk,add_entry
+i want to have a chat about today,add_entry
+i want to make a new diary entry,add_entry
+I would like to add an entry to my diary,add_entry
+can we talk about my day,add_entry
+i want to add today's events to the diary,add_entry
+let's have a chat about my day,add_entry
+i wanna add to the diary,add_entry
+i want to make a new diary entry,add_entry
+i would like to create a new diary entry,add_entry
+let's talk about my day,add_entry
+can we talk about today,add_entry
+can we have a chat about today,add_entry
+can we have a conversation,add_entry
+ i would like to have a conversation,add_entry
+i would like to start a new diary entry,add_entry
+i want to start talking about today,add_entry
+i want to tell you about my day,add_entry
+is it okay if we talked,add_entry
+i'd like to chat,add_entry
+can i add to my diary,add_entry
+could i add an entry,add_entry
+i'd like to talk,add_entry
+i'd like to have a conversation,add_entry
+let's make a new entry,add_entry
+may i please add an entry,add_entry
+may i please talk about my day,add_entry
+i want to discuss what happened today,add_entry
+i want to talk about what happened today,add_entry
+lets talk about what happened today,add_entry
+i want to discuss today,add_entry
+can i run you through my day,add_entry
+can we discuss my day,add_entry
+i want to record my day ,add_entry
+i want to add what happened today to the diary,add_entry
+let's discuss  today,add_entry
+i want to have a conversation about what happened today,add_entry
+let's talk about what happened today please,add_entry
+could we please talk,add_entry
+could we please have a chat,add_entry
+i'd like to add an entry to my diary,add_entry
+may i add an entry,add_entry
+i wish to talk,add_entry
+could we have a conversation,add_entry
+how about we make a new entry,add_entry
+how about we talk about today,add_entry
+how about i tell you about my day,add_entry
+can we discuss what happened today,add_entry
+i would like to talk about what happened today,add_entry
+how about we talk about what happened today,add_entry
+i want to discuss what happened to me today,add_entry
+could i run you through my day,add_entry
+is it okay if we talk about today,add_entry
+i'd appreciate it if we spoke about today,add_entry
+can i add what happened today to the diary,add_entry
+i'd like to discuss what happened today,add_entry
+can we have a conversation about today,add_entry
+we could talk about what happened today,add_entry
+can we talk about last week,entry_query
+i want to talk about an earlier day,entry_query
+can i view a previous entry?,entry_query
+i want to see an early entry,entry_query
+what did i do 5 days ago,entry_query
+who did i visit 3 days ago?,entry_query
+what was I doing 2 weeks ago?,entry_query
+how did i feel yesterday?,entry_query
+who did i see yesterday?,entry_query
+when is the last time i saw bob?,entry_query
+where did i go 9 days ago?,entry_query
+what was i doing with alex last night?,entry_query
+how did i feel last wednesday,entry_query
+how did i feel last monday,entry_query
+how did i feel last tuesday,entry_query
+how did i feel last thursday,entry_query
+how did i feel last friday,entry_query
+how did i feel last saturday,entry_query
+how did i feel last sunday,entry_query
+when was the last time i was sad?,entry_query
+who did i visit mcdonald's with?,entry_query
+did i go to the gym last week?,entry_query
+when did i last meet chad?,entry_query
+how was i feeling when i saw brad?,entry_query
+tell me where i went on sunday,entry_query
+tell me what i did 2 days ago,entry_query
+show me the previous entries,entry_query
+show me my entry from 3 days ago,entry_query
+tell me who i saw 2 weeks ago,entry_query
+tell me when i last went to kfc,entry_query
+tell me my emotions 12 days ago,entry_query
+what were my emotions last monday,entry_query
+what were my emotions last tuesday,entry_query
+what were my emotions last thursday,entry_query
+what were my emotions last friday,entry_query
+what were my emotions last saturday,entry_query
+what were my emotions last sunday,entry_query
+what were my emotions last wednesday,entry_query
+was i anxious when i went to the concert,entry_query
+was bill there when i went to school,entry_query
+was i sad when i went to the water park,entry_query
+when i met cory was i sad?,entry_query
+how long ago was i tired,entry_query
+how long ago did i visit the zoo,entry_query
+how long ago did i go back home?,entry_query
+how long ago did i see alice?,entry_query
+tell me who i saw in the station 4 days ago,entry_query
+who did i visit the park with last week?,entry_query
+can we talk about yesterday,entry_query
+i want to talk about last night,entry_query
+i want to discuss what happened last monday,entry_query
+i want to discuss what happened last tuesday,entry_query
+i want to discuss what happened last wednesday,entry_query
+i want to discuss what happened last thursday,entry_query
+i want to discuss what happened last friday,entry_query
+i want to discuss what happened last saturday,entry_query
+i want to discuss what happened last sunday,entry_query
+can i view an entry from before?,entry_query
+i want to see an entry from earlier,entry_query
+what did i do 2 weeks ago,entry_query
+who did i visit 6 days ago?,entry_query
+what was I doing 4 days ago?,entry_query
+how did i feel yesterday?,entry_query
+who did i see yesterday?,entry_query
+when is the last time i saw bob?,entry_query
+where did i go yesterday?,entry_query
+what was i doing with alex last night?,entry_query
+when was the first time i was sad?,entry_query
+who did i visit the park with?,entry_query
+did i go to the museum last week?,entry_query
+when the last time i saw allen?,entry_query
+how was i feeling when i met rita?,entry_query
+tell me where i went on Saturday,entry_query
+tell me what i did 10 days ago,entry_query
+show me my previous entries,entry_query
+show me my entry from 3 weeks ago,entry_query
+tell me who i met a month ago,entry_query
+tell me when i last went to kfc,entry_query
+tell me my emotions from a month ago,entry_query
+what were my emotions last month,entry_query
+was i anxious when i went to the stadium,entry_query
+was chad there when i went to the park,entry_query
+was i sad when i went to the carnival,entry_query
+when i met jane was i happy?,entry_query
+how long ago was i upset?,entry_query
+when was the last time I visited the carnival,entry_query
+how long ago did i go to school?,entry_query
+when was the last time i met alice?,entry_query
+tell me who i met at the parking lot a month ago,entry_query
+who did i visit the museum with last month?,entry_query
+can we talk about last month,entry_query
+i want to talk about an last month,entry_query
+can i view an earlier entry?,entry_query
+i want to see a previous entry,entry_query
+what did i do 5 weeks ago,entry_query
+who did i visit yesterday?,entry_query
+what was I doing 2 months ago?,entry_query
+how did i feel last week?,entry_query
+who did i meet 3 months ago?,entry_query
+when is the last time i caught up with dave?,entry_query
+where did i go 8 weeks ago?,entry_query
+what was i doing with jean last night?,entry_query
+how did i feel last Sunday,entry_query
+remind me about the last time I was sad,entry_query
+who did i visit five guys with?,entry_query
+did i go to the gym last month?,entry_query
+when did i meet chad yesterday?,entry_query
+how was i feeling when i saw brad yesterday?,entry_query
+tell me where i went yesterday,entry_query
+what did i do yesterday,entry_query
+show me the previous entries,entry_query
+show me yesterday's entry,entry_query
+tell me who i saw yesterday,entry_query
+did i visit the park yesterday?,entry_query
+tell me my emotions 12 days ago,entry_query
+what were my emotions last Wednesday,entry_query
+what happened on wednesday,entry_query
+what happened on monday last week,entry_query
+what happened yesterday,entry_query
+what happened on monday,entry_query
+what happened on tuesday,entry_query
+what happened on thursday,entry_query
+what happened on friday,entry_query
+what happened on saturday,entry_query
+what happened on sunday,entry_query
+what happened last week on monday,entry_query
+what happened last week on tuesday,entry_query
+what happened last week on wednesday,entry_query
+what happened last week on thursday,entry_query
+what happened last week on friday,entry_query
+what happened last week on saturday,entry_query
+what happened last week on mday,entry_query
+what happened last week on wdnesay,entry_query
+what happened last week on tsday,entry_query
+what happened last week on thusday,entry_query
+what happened last week on fday,entry_query
+what happened during the weekend,entry_query
+who was i with on saturday,entry_query
+who was i with on sunday,entry_query
+who was i with on monday,entry_query
+who was i with on tuesday,entry_query
+who was i with on wedenesday,entry_query
+who did i see on saturday,entry_query
+where did i go on saturday,entry_query
+where did i go,entry_query
+where did i go on sunday,entry_query
+tell me where i was on monday,entry_query
+tell me where i visited last weekend,entry_query
+was i anxious when i went outside yesterday?,entry_query
+how much is an overdraft fee for bank,oos
+why are exponents preformed before multiplication in the order of operations,oos
+what size wipers does this car take,oos
+where is the dipstick,oos
+how much is 1 share of aapl,oos
+how is glue made,oos
+any headlines from my area,oos
+what is the largest state in the us,oos
+what is the current market trend,oos
+what is the most popular airline,oos
+what is the formula for the circumference of a circle,oos
+what are some ways to reduce spending,oos
+what time does the louvre open,oos
+are there any local stations covering the moral march in raleigh in februaryu,oos
+how many planets have we discovered,oos
+how do i change my billing address,oos
+how do i open an online line of credit,oos
+how do i remove a coffee blemish,oos
+how expensive is an apple share,oos
+where can i find the cruise control on my kia sportage 2010,oos
+how many sides are in a hexagon,oos
+how fast does an airplane travel,oos
+is it worth investing in target,oos
+i need to speak to customer service regarding my flight,oos
+how long do wire transfers take,oos
+what are some deals on amazon,oos
+what city is the super bowl,oos
+what trees change color in autumn,oos
+do people prefer summer over fall,oos
+how long is winter,oos
+what were some of ben franklin's notable accomplishments,oos
+where was john denver born,oos
+where did abraham lincoln live,oos
+when was kobe bryant born,oos
+who's toledo's starting point guard for the next game,oos
+how many players are on the chicago bulls,oos
+who is the coach of the chicago bulls,oos
+when do the utah jazz play next,oos
+what other nations were involved in the chinese trade war,oos
+what years has korea been at war,oos
+when was the theory of evolution first considered,oos
+who formulated the theory of relativity,oos
+what stage of evolution am i,oos
+what other personality type is most compatible with infjs,oos
+what does my personality mean,oos
+what's the most dominant scale in bluegrass,oos
+what year was saxaphone first played,oos
+which piano is best for classical,oos
+is k-12 education required outside of the united states,oos
+what are the benefits of completing college,oos
+are you able to answer algebra equations,oos
+can you help me study for a history exam,oos
+how many points per game is lebron james averaging this season,oos
+what team does eli mannign play for,oos
+get me dwight howard shooting average,oos
+can you list me tiger wood's stats,oos
+what's the runtime of all the lord of the rings movies combined,oos
+which character is the most famous from titanic,oos
+how many oscars did star wars films win,oos
+what year was shawshank redemption released,oos
+which marvel character has appeared in the most movies,oos
+when's the next movie starring thor set to come out,oos
+who was the first capcom character,oos
+are any justice league movies coming out,oos
+can you tell me something about the nfl,oos
+please explain the catch rule to me,oos
+is there overtime in college football,oos
+when did the mls start,oos
+what's the best price on super smash bros ultimate right now,oos
+what is the highest earning game on atari,oos
+when is the next nintendo direct,oos
+when was nintendo created,oos
+please find the capital of pakistan and its population,oos
+how many people live in taiwan,oos
+what are some of picasso's most famous works,oos
+what are van gogh's best pieces,oos
+where can i see art,oos
+when did camus die,oos
+how much money does radiohead earn a year,oos
+who is radiohead,oos
+what's the biggest saas marketing company in the united states,oos
+how do i start my own marketing firm,oos
+how can i get involved in restaurant marketing,oos
+what is saas marketing,oos
+what do you call someone who was born in segovia,oos
+what is rhineland,oos
+who is the scariest character in start trek,oos
+who is the current captain of this ship,oos
+what year was star trek released,oos
+when was toyota created,oos
+who are some notable alumni of ucsd,oos
+could you translate water into dutch for me,oos
+"could you translate this into chinese for me, please",oos
+"can you translate this name into spanish for me, please",oos
+would you translate a phrase into mandarin for me,oos
+"would you translate a sentence into russian for me, please",oos
+i want to know how to say goodbye in france,oos
+tell me how to say hello in chile,oos
+how do you say hello in mexico,oos
+would you tell me how to say goodbye in france,oos
+i need to know how to say hello in france,oos
+how can i say thank you very much in chinese,oos
+how do i say good bye in chinese,oos
+how do i say thank you in spanish,oos
+"how can i say \""cancel my order\"" in french",oos
+how do you say good bye in french,oos
+"how can i say \""cancel my order\"" in french",oos
+what is the next football game,oos
+how many students attend ucsb,oos
+when do classes start,oos
+how can i become an aerospace engineer,oos
+what percentage of species display cold blooded traits,oos
+what does it mean to be an alpha male,oos
+what animals have alpha males,oos
+why do males want to be alpha,oos
+"in spanish, meet me tomorrow is said how",oos
+"in french, how do i say, see you later",oos
+how do you say hello in japanese,oos
+how do i ask about the weather in chinese,oos
+transfer ten dollars from my wells fargo account to my bank of america account,oos
+take one hundred and fifty bucks from my wells fargo checking account and put it in my wells fargo savings account,oos
+put one hundred and seventy five bucks in my wells fargo checking account from my citibank savings account,oos
+move two hundred dollars to my chase savings account to my wells fargo checking account,oos
+move three hundred and fifty dollars from my citibank savings account to my chase savings account,oos
+move a dollar from my checkings to my savings,oos
+move my money to the other account,oos
+transfer funds to the other account,oos
+please transfer half of my funds to an alternate account,oos
+can you move my money to my savings,oos
+make an eft to my savings from my checking account,oos
+send 100 dollars from my vanguard money market to my wells fargo savings,oos
+i need 200 dollars transferred from my long island savings account to my chase checking,oos
+send from my bbc money market to my t rowe price money market seven thousand dollars,oos
+i need 2000 to go to my chase checking from my mellon bank savings account,oos
+move 100 dollars from my savings to my checking,oos
+transfer 1000 dollars from my first national bank to my bethpage federal credit union savings,oos
+take out of my checking 400 dollars and put it into my emergency savings account,oos
+i need to transfer one thousand dollars to my savings account from my checking,oos
+transfer 50 dollars from my checking account to my money market account,oos
+create a new timer,oos
+i'd like to set a new timer,oos
+help me set a timer please,oos
+10 minutes is what the timer should be set at,oos
+the timer should have 10 minutes set to it,oos
+10 minutes is the setting for the timer,oos
+the timer is calculated for 10 minutes,oos
+set the timer for 10 minutes,oos
+can you set a 30 second timer,oos
+please set a timer to go off in 45 minutes,oos
+i need you to create a timer,oos
+i need a timer set please,oos
+create a timer that is set to go off after 25 mins,oos
+i need a timer that is set at 1 hour exactly,oos
+could you set up a timer for me,oos
+will you start a timer for me,oos
+set up a 52 minute timer,oos
+please set up a timer for me,oos
+set 60 minutes for oven please,oos
+please make the timer for cooking for for 2 hours,oos
+may i please have a definition for the work churlish,oos
+i want to know what trenchant means,oos
+what is the meaning of fascism,oos
+can you tell me what a septuagenarian is,oos
+can you define the word schadenfreude,oos
+what does unsavory mean,oos
+please define erection for me,oos
+what does idiosyncratic mean,oos
+tell me the meaning of condemnation,oos
+define monetary for me please,oos
+tell me the meaning of hegemony,oos
+what does indignation mean,oos
+define ambivalence for me please,oos
+please define institutional racism,oos
+define antagonist for me please,oos
+what does distinguish mean,oos
+what is the meaning of word alliance,oos
+i need to know what dominate means,oos
+what is the definition of the word migrate,oos
+tell me please what paean means,oos
+i want to know what the purpose of life is,oos
+i want to hear what you think life's purpose is about,oos
+what do you think the purpose of life is,oos
+what is the purpose of existence,oos
+what do you think our purpose is in life,oos
+i'd like to know the meaning of life,oos
+what's your opinion on the meaning of life,oos
+what is life's purpose,oos
+tell me all about the meaning of life,oos
+tell me your thoughts about the meaning of life,oos
+do you have any ideas on the meaning of life,oos
+do you know the deeper meaning of life,oos
+tell me the meaning of life,oos
+"can you tell me, what is the meaning of life",oos
+what's is the current weather forecast,oos
+tell me the forecast,oos
+what's the weather like,oos
+what's the forecast for the day,oos
+i need to know the weather,oos
+weather forecast please,oos
+what's today's weather,oos
+i need to know today's forecast,oos
+is it going to rain tomorrow,oos
+what's the average battery life of an android phone,oos
+what is the weather outside,oos
+what will be the weather tomorrow,oos
+what is the weather in atlanta,oos
+what's the humidity today,oos
+what was the temperature yesterday,oos
+what's today's high and low,oos
+what's the weather today,oos
+what's the chance of rain,oos
+can you tell the temperature it will tomorrow,oos
+what time is it,oos
+what's the time,oos
+what time is it right now,oos
+tell me the time,oos
+what time is it best to leave,oos
+when is the next time i'll receive a paycheck,oos
+when did i last collect my salary,oos
+when do i next get paid,oos
+when is my paycheck arriving,oos
+what day is payday,oos
+do you know when my next check is coming,oos
+when do i get my next paycheck,oos
+when's pay day for me,oos
+i need to know when i get paid next,oos
+when's my next pay day,oos
+what day's my pay coming next,oos
+when do i get paid for my work,oos
+what day will i earn my payment from work,oos
+find out when my next upcoming payday will be,oos
+when is the next payday i can look forward to,oos
+what day can i expect to receive payment on,oos
+can you move my money to my savings,oos
+how long does it take for a credit card to be reissued and mailed to me,oos
+can credit card companies expedite delivery of reissued credit cards,oos
+can you call the help desk line for my credit card company,oos
+how can i request a new credit card,oos
+what's the phone number for my credit card company,oos
+i recently lost my credit card and need to know how long it takes to get a new one mailed to me,oos
+i need to know the time it takes to get a new credit card sent to someone who lost theirs,oos
+i lost my credit card recently  how long does take to get a new one in the mail,oos
+what is amount of time it takes to get a new credit card i lost mine recently,oos
+will i get getting my new card anytime soon,oos
+what is the shipping status of my replacement card,oos
+how long until i get my replacement card,oos
+whats the calorie content of oatmeal,oos
+what is the calorie count of an apple,oos
+how many calories on average are in a hot dog,oos
+how many calories are in a piece of bacon,oos
+let my credit card company know that my card split in half,oos
+tell me the amount of calories in muffins,oos
+are there a lot of calories in muffins,oos
+what is the calorie count in a cookie,oos
+can you tell me how many calories are in cookies,oos
+how many calories are in cookies,oos
+what is the caloric value of a cookie,oos
+i need to know the number of calories on average in a handful of pistachios,oos
+do you know how many calories are in a single chicken breast,oos
+what's the average number of calories in one cup of tomato soup,oos
+please tell me how many calories one chocolate bar contains,oos
+give me expected number of calories in a breakfast burrito,oos
+do i have any birthdays on my todo list,oos
+please make the timer for cooking for for 2 hours,oos
+report lost card to discover company,oos
+i want to know what trenchant means,oos
+"could you please help me, my card has been stolen and i need to report it",oos
+i would like to have my card reported as stolen,oos
+help me report my lost mastercard,oos
+i lost my amex and need to report it,oos
+what can i do if my card is lost,oos
+my card is lost what do i do,oos
+my card is lost how do i report it,oos
+what must i do to report my card lost,oos
+phone call secretary,oos
+i'm looking to call a group,oos
+call tom,oos
+dial christie's cell,oos
+can you call someone,oos
+call someone for me,oos
+dial someone's phone number,oos
+it's time for me to call drew,oos
+it's necessary to call michael,oos
+i must call jordan,oos
+place a call to bill now,oos
+can you call russell,oos
+place call to robby,oos
+call robby for me,oos
+dial steven,oos
+i want to make a call to uncle,oos
+initiate a phone call with receptionist,oos
+can a phone call be made to maria,oos
+i need you to call the broker,oos
+set my alarm for getting up,oos
+make sure my alarm is set for three thirty in the morning,oos
+please set an alarm for mid day,oos
+have an alarm set for three in the morning,oos
+you need to set alarm for me,oos
+i need you to set alarm for me,oos
+set the alarm for me,oos
+can you set alarm for me,oos
+please set alarm for me,oos
+make a new alarm for 6 in the morning,oos
+make a new alarm,oos
+create an alarm,oos
+can you alert me at 6 in the morning,oos
+i'd like a new alarm set for 6am,oos
+schedule an alarm,goodbye
+"syonara, ai device!",goodbye
+"goodbye, helpful ai device!",goodbye
+bye-bye,goodbye
+"goodbye, ai assistant",goodbye
+glad we got to talk,goodbye
+i'm glad i got to talk to you,goodbye
+nice to speak with you,goodbye
+this was a great conversation,goodbye
+talk to you later,goodbye
+tata for now,goodbye
+i'm out of here,goodbye
+"that's all, bye",goodbye
+see ya later,goodbye
+adios ai,goodbye
+"it was great to see you again, see ya later!",goodbye
+"i had a pleasure talking to you, see you later",goodbye
+"nice talking again, bye",goodbye
+i have to go but it was nice talking again!,goodbye
+"i am glad we got to talk again, see you soon",goodbye
+sayonara,goodbye
+catch you around,goodbye
+good seeing you,goodbye
+"later, thanks for chatting",goodbye
+adios,goodbye
+"great talk, take it easy",goodbye
+see ya,goodbye
+"great chat, talk to you later",goodbye
+"nice talk, talk to you later",goodbye
+"thanks for chatting, later",goodbye
+goodbye to you,goodbye
+i must say goodbye,goodbye
+i'm saying goodbye now,goodbye
+it is time to say goodbye,goodbye
+i have to say goodbye,goodbye
+cya later,goodbye
+i enjoyed talking to you,goodbye
+thanks for talking,goodbye
+it was good chatting,goodbye
+it was nice chatting with you,goodbye
+always nice to talk to you,goodbye
+"see you later, alligator",goodbye
+good night,goodbye
+it was nice to get in touch,goodbye
+see you soon,goodbye
+later gator!,goodbye
+it was nice to talk it out with you,goodbye
+it was nice to converse with you,goodbye
+ill see you around,goodbye
+take it easy!,goodbye
+later gater,goodbye
+it was nice to speak with you,goodbye
+see you later alligator,goodbye
+fairwell,goodbye
+have a good one,goodbye
+peace,goodbye
+bye for now,goodbye
+"thanks, bye",goodbye
+i have to get going,goodbye
+talk to you later!,goodbye
+i’ll be leaving now,goodbye
+i’m leaving-goodbye!,goodbye
+thanks for talking to me,goodbye
+it was really nice to be able to chat with you,goodbye
+it was good to talk to you today,goodbye
+it was great to have this conversation with you,goodbye
+it was nice to catch up with you,goodbye
+it was enjoyable talking with you,goodbye
+it was great chatting with you,goodbye
+it was cool talking with you,goodbye
+it was pleasant conversing with you,goodbye
+good bye my friend,goodbye
+i need to go now,goodbye
+see you again soon,goodbye
+i've got to run now,goodbye
+goodbye!,goodbye
+i had fun speaking with you,goodbye
+bye!,goodbye
+later!,goodbye
+adios!,goodbye
+until next time!,goodbye
+farewell!,goodbye
+it was enjoyable to chat with you,goodbye
+i'm outta here!,goodbye
+it was pleasant having a conversation with you,goodbye
+bye now,goodbye
+buhbye,goodbye
+see you in a while,goodbye
+see you around,goodbye
+nice to see you again,goodbye
+nice to see you,goodbye
+talk later,goodbye
+tootles,goodbye
+peace out,goodbye
+goodbye for now ai,goodbye
+ai goodbye,goodbye
+i'll talk to you later ai,goodbye
+we'll talk later ai,goodbye
+i have to go ai goodbye,goodbye
+bye bye!,goodbye
+see you later!,goodbye
+

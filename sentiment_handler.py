@@ -16,9 +16,6 @@ moods = {
     "neutral": ":L"}
 
 
-prediction = classifier("I love using transformers. The best part is wide range of support and its easy to use", )
-
-
 def predict_sentiment(user_input):
     sent_pred = classifier(user_input)
     sentiment = sent_pred[0]['label']
