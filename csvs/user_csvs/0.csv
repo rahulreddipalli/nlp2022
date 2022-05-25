@@ -1,0 +1,10 @@
+date,entry,location,people,emotion,emoticon
+,,,,,
+2022-05-23,I love my mum,[],[],happy,:D
+2022-05-22,I slept all day and I was sad,[],[],neutral,:D
+2022-05-21,this is a test,[],[],neutral,:D
+2022-05-20,Kannan took my ice cream,[],[Kannan],sad,:D
+2022-05-19,i said hi to my mum,[],[],happy,:D
+2022-05-18,i visted my dad Siren in New York City,['New York City'],['Siren'],neutral,:L
+2022-05-25,felt sad,[],[],sad,:C
+
