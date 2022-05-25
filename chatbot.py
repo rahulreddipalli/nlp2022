@@ -90,6 +90,7 @@ class Chatbot:
         response = ""
         intent = intent_handler.predict_intent(user_input)
         print(intent)
+
         if intent == "yes":
             self.__change_state(STATE.LOGIN_NAME_ENTRY)
             response = "Great! Please could you tell me your name?"
@@ -99,10 +100,10 @@ class Chatbot:
             response = "No worries, let's create a profile for you. What's your name?"
 
         elif intent in ["cancel", "goodbye"]:
+            response = "Okay, have a nice day. Goodbye!"
             self.__change_state(STATE.GREETING)
-            response = "Okay, see you soon!"
         else:
-            response = "Sorry, didn't quite catch that, please could you confirm whether you've used DearBot before?"
+            response = "Sorry, I didn't quite catch that, please could you confirm whether you've used DearBot before?"
         return response
 
     def __get_names(self, user_input):
@@ -143,6 +144,7 @@ class Chatbot:
     def confirm_overwrite(self, user_input):
         response = ""
         intent = intent_handler.predict_intent(user_input)
+        print(intent)
         if intent == "yes":
             self.__change_state(STATE.ADD_OVERWRITE)
             response = "Sure, tell me about your day!"
@@ -151,9 +153,9 @@ class Chatbot:
             self.__change_state(STATE.RUNNING)
             response = "No problem, let's leave your diary as it is. What would you like to do now?"
         elif intent == "goodbye":
-            self.goodbye()
+            response = self.goodbye()
         else:
-            response = "Sorry, please could you confirm if you want to overwrite today's entry?"
+            response = "Sorry, please could you confirm if you would like to overwrite today's entry?"
 
         return response
 
@@ -162,11 +164,11 @@ class Chatbot:
 
         intent = intent_handler.predict_intent(user_input)
 
-        if intent == "cancel":
+        if intent in ["cancel", "no"]:
             self.__change_state(STATE.RUNNING)
             response = "No problem, you can always add to your diary later. What would you like to do now?"
         elif intent == "goodbye":
-            self.goodbye()
+            response = self.goodbye()
         else:
             user_data = pd.read_csv('csvs/user_csvs/{}.csv'.format(self.user_id))
             user_data = user_data.to_numpy()
@@ -275,7 +277,7 @@ class Chatbot:
             if names != None:
                 self.users_name = names[0]
             self.__change_state(STATE.CONFIRM_LOGIN_NAME)
-            response = "Is {} your name?".format(self.users_name)
+            response = "Just checking I got that correctly, is your name {}?".format(self.users_name)
 
         return response
 
@@ -291,7 +293,7 @@ class Chatbot:
             response = "No problem, what should I call you?"
         elif intent in ["cancel", "goodbye"]:
             self.__change_state(STATE.GREETING)
-            response = "Okay, no worries, see you soon!"
+            response = "Okay, no worries, see you soon! Goodbye!"
         else:
             response = "Sorry, please could you confirm if {} is your name?".format(self.users_name)
 
@@ -366,7 +368,7 @@ class Chatbot:
 
         elif intent == "cancel":
             self.__change_state(STATE.CONFIRM_EXIT)
-            response = "Sorry, I can't help if you don't set a phrase! Would you like to leave?"
+            response = "Sorry, I can't help unless you set a phrase! Would you like to leave?"
         else:
             return "Sorry, please could you confirm if you want to use the phrase {}?".format(self.users_phrase)
 
@@ -378,7 +380,7 @@ class Chatbot:
 
         if intent in ["yes", "goodbye"]:
             self.__change_state(STATE.GREETING)
-            response = "Okay :( See you soon."
+            response = "Okay :( See you soon. Goodbye!"
         else:
             self.__change_state(STATE.CREATE_PROFILE_PHRASE)
             response = "Okay, please enter a special phrase.".format(self.users_name)
@@ -392,7 +394,7 @@ class Chatbot:
 
         if intent in ["cancel", "no", "goodbye"]:
             self.__change_state(STATE.GREETING)
-            return "Okay. See you next time."
+            return "Okay. See you next time. Goodbye!"
         else:
             if names is None:
                 return "Sorry I didn't recognise a name? What is your name?"
@@ -419,7 +421,7 @@ class Chatbot:
 
         elif intent in ["cancel", "goodbye"]:
             self.__change_state(STATE.GREETING)
-            response = "Sorry, I can't help without your name.. See you next time."
+            response = "Sorry, I can't help without your name.. Goodbye!"
 
         else:
             return "Sorry, please could you confirm if {} is your name?".format(self.users_name)
