@@ -21,9 +21,9 @@ it's good to see you,greeting
 is everything going okay,greeting
 how is everything going,greeting
 how goes it,greeting
-"hello, ai",greeting
-"hey, ai",greeting
-"wake up, ai",greeting
+"hello, dearbot",greeting
+"hey, dearbot",greeting
+"wake up, dearbot",greeting
 good day,greeting
 greetings to you,greeting
 "hello, friend",greeting
@@ -35,11 +35,11 @@ how are things for you,greeting
 are things going well for you,greeting
 hello siri,greeting
 hi there alexa,greeting
-"how are you doing, ai",greeting
-ai how are you doing today,greeting
-"how are you doing today, ai",greeting
-how is my ai doing,greeting
-ai how are you doing on this fine day,greeting
+"how are you doing, dearbot",greeting
+dearbot how are you doing today,greeting
+"how are you doing today, dearbot",greeting
+how is my dearbot doing,greeting
+dearbot how are you doing on this fine day,greeting
 heller,greeting
 so how is everything,greeting
 how are you this day,greeting
@@ -58,10 +58,10 @@ how are things,greeting
 are you doing well,greeting
 good evening,greeting
 yo,greeting
-"ai, how are you feeling",greeting
-how is the ai doing,greeting
-"ai, how are you doing",greeting
-hi ai,greeting
+"dearbot, how are you feeling",greeting
+how is the dearbot doing,greeting
+"dearbot, how are you doing",greeting
+hi dearbot,greeting
 have you been good,greeting
 is everything ok with you,greeting
 how have you been,greeting
@@ -99,99 +99,99 @@ hey what's up,greeting
 "why, hello bandit",greeting
 "howdy, what's new",greeting
 salutations!,greeting
-"please cancel what you are doing, i've changed my mind",goodbye
-"never mind, cancel that",goodbye
-"stop working on it, i need something else",goodbye
-"cancel",goodbye
-"forget it, i do not need it anymore",goodbye
-cancel that last thing,goodbye
-stop,goodbye
-stop and go back,goodbye
-ai stop talking,goodbye
-quiet now,goodbye
-shhhh,goodbye
-how do i make you stop talking,goodbye
-can you be quiet please,goodbye
-please stop doing what i asked,goodbye
-please be quiet,goodbye
-i would like you to stop what you were doing,goodbye
-please cancel that last command,goodbye
-can you stop what you were doing,goodbye
-can you stop,goodbye
-shut up!,goodbye
-i need you to stop talking now,goodbye
-i want you to quit the action,goodbye
-discontinue please,goodbye
-i don't want you to speak any more for now,goodbye
-discontinue your current task,goodbye
-abort please,goodbye
-quit the current action please,goodbye
-forget my previous command,goodbye
-abort the current action,goodbye
-actually forget that i don't need it,goodbye
-quit what you are doing,goodbye
-"sorry, you can actually stop that",goodbye
-"i actually don't want this anymore, please abort",goodbye
-please cancel your present task,goodbye
-"that's enough, don't say anymore please",goodbye
-i want you to stop your present action,goodbye
-stop talking please,goodbye
-"what you are doing is not actually helpful, please cancel the action",goodbye
-please stop,goodbye
-cancel action,goodbye
-please cancel the input,goodbye
-"ai, stop talking",goodbye
-"ai, shut up",goodbye
-"ai, stop!",goodbye
-please be quiet now,goodbye
-terminate,goodbye
-halt,goodbye
-would you stop talking please,goodbye
-please abandon the current job,goodbye
-please abort the current task,goodbye
-terminate current process,goodbye
-i want you to cancel the current action,goodbye
-abort,goodbye
-please stop doing that,goodbye
-abort running program,goodbye
-don't continue with what you're doing,goodbye
-oh shut the hell up would you,goodbye
-destroy process,goodbye
-please cancel that last task,goodbye
-please refrain from carrying out the current task,goodbye
-"ai, cancel that last request",goodbye
-do not complete the task that i gave you,goodbye
-"ai, please stop your current task",goodbye
-"actually, cancel that command",goodbye
-"nevermind, forget that",goodbye
-"actually, stop it",goodbye
-forget it,goodbye
-cancel that,goodbye
-don't do this process,goodbye
-undo,goodbye
-cancel current process,goodbye
-undo this process,goodbye
-just shut up,goodbye
-stop that,goodbye
-cancel that input,goodbye
-"never mind, dont want to do anything anymore",goodbye
-never mind,goodbye
-stop doing that,goodbye
-halt that immediately,goodbye
-stop the process happening now,goodbye
-oops cancel that,goodbye
-can you stop,goodbye
-could you stop talking for a second,goodbye
-could you stop please,goodbye
-can you switch off,goodbye
-can you stop speaking,goodbye
-can you please cancel,goodbye
-can you end the task,goodbye
-scratch,goodbye
-refrain from talking,goodbye
-halt the process,goodbye
-no more talking,goodbye
-i advise you to quit talking,goodbye
+"please cancel what you are doing, i've changed my mind",cancel
+"never mind, cancel that",cancel
+"stop working on it, i need something else",cancel
+"cancel",cancel
+"forget it, i do not need it anymore",cancel
+cancel that last thing,cancel
+stop,cancel
+stop and go back,cancel
+dearbot stop talking,cancel
+quiet now,cancel
+shhhh,cancel
+how do i make you stop talking,cancel
+can you be quiet please,cancel
+please stop doing what i asked,cancel
+please be quiet,cancel
+i would like you to stop what you were doing,cancel
+please cancel that last command,cancel
+can you stop what you were doing,cancel
+can you stop,cancel
+shut up!,cancel
+i need you to stop talking now,cancel
+i want you to quit the action,cancel
+discontinue please,cancel
+i don't want you to speak any more for now,cancel
+discontinue your current task,cancel
+abort please,cancel
+quit the current action please,cancel
+forget my previous command,cancel
+abort the current action,cancel
+actually forget that i don't need it,cancel
+quit what you are doing,cancel
+"sorry, you can actually stop that",cancel
+"i actually don't want this anymore, please abort",cancel
+please cancel your present task,cancel
+"that's enough, don't say anymore please",cancel
+i want you to stop your present action,cancel
+stop talking please,cancel
+"what you are doing is not actually helpful, please cancel the action",cancel
+please stop,cancel
+cancel action,cancel
+please cancel the input,cancel
+"dearbot, stop talking",cancel
+"dearbot, shut up",cancel
+"dearbot, stop!",cancel
+please be quiet now,cancel
+terminate,cancel
+halt,cancel
+would you stop talking please,cancel
+please abandon the current job,cancel
+please abort the current task,cancel
+terminate current process,cancel
+i want you to cancel the current action,cancel
+abort,cancel
+please stop doing that,cancel
+abort running program,cancel
+don't continue with what you're doing,cancel
+oh shut the hell up would you,cancel
+destroy process,cancel
+please cancel that last task,cancel
+please refrain from carrying out the current task,cancel
+"dearbot, cancel that last request",cancel
+do not complete the task that i gave you,cancel
+"dearbot, please stop your current task",cancel
+"actually, cancel that command",cancel
+"nevermind, forget that",cancel
+"actually, stop it",cancel
+forget it,cancel
+cancel that,cancel
+don't do this process,cancel
+undo,cancel
+cancel current process,cancel
+undo this process,cancel
+just shut up,cancel
+stop that,cancel
+cancel that input,cancel
+"never mind, dont want to do anything anymore",cancel
+never mind,cancel
+stop doing that,cancel
+halt that immediately,cancel
+stop the process happening now,cancel
+oops cancel that,cancel
+can you stop,cancel
+could you stop talking for a second,cancel
+could you stop please,cancel
+can you switch off,cancel
+can you stop speaking,cancel
+can you please cancel,cancel
+can you end the task,cancel
+scratch,cancel
+refrain from talking,cancel
+halt the process,cancel
+no more talking,cancel
+i advise you to quit talking,cancel
 yep,yes
 that is affirmative,yes
 what you just said is true,yes
@@ -292,6 +292,12 @@ it is a true,yes
 its a for sure true,yes
 yes sir,yes
 it's true,yes
+yah,yes
+yah fam,yes
+yeeeee,yes
+ye,yes
+lol yeah,yes
+lol yes,yes
 "no, that's incorrect",no
 that's not true,no
 "that is not true, it's false",no
@@ -392,6 +398,13 @@ i think that's false,no
 i believe that to be false,no
 it seems not,no
 that would be false,no
+no lol,no
+nah man,no
+nahhhh,no
+nah fam,no
+na,no
+lol never,no
+lol no, no
 i want to create a new entry,add_entry
 let's create an entry,add_entry
 i need to create an entry,add_entry
@@ -948,13 +961,15 @@ please set alarm for me,oos
 make a new alarm for 6 in the morning,oos
 make a new alarm,oos
 create an alarm,oos
+i want to take a picture,oos
+i want to take a walk outside,oos
 can you alert me at 6 in the morning,oos
 i'd like a new alarm set for 6am,oos
-schedule an alarm,goodbye
-"syonara, ai device!",goodbye
-"goodbye, helpful ai device!",goodbye
+schedule an alarm,oos
+"syonara, dearbot!",goodbye
+"goodbye, helpful dearbot!",goodbye
 bye-bye,goodbye
-"goodbye, ai assistant",goodbye
+"goodbye, dearbot",goodbye
 glad we got to talk,goodbye
 i'm glad i got to talk to you,goodbye
 nice to speak with you,goodbye
@@ -964,7 +979,7 @@ tata for now,goodbye
 i'm out of here,goodbye
 "that's all, bye",goodbye
 see ya later,goodbye
-adios ai,goodbye
+adios dearbot,goodbye
 "it was great to see you again, see ya later!",goodbye
 "i had a pleasure talking to you, see you later",goodbye
 "nice talking again, bye",goodbye
@@ -1044,11 +1059,11 @@ nice to see you,goodbye
 talk later,goodbye
 tootles,goodbye
 peace out,goodbye
-goodbye for now ai,goodbye
-ai goodbye,goodbye
-i'll talk to you later ai,goodbye
-we'll talk later ai,goodbye
-i have to go ai goodbye,goodbye
+goodbye for now dearbot,goodbye
+dearbot goodbye,goodbye
+i'll talk to you later dearbot,goodbye
+we'll talk later dearbot,goodbye
+i have to go dearbot goodbye,goodbye
 bye bye!,goodbye
 see you later!,goodbye
 
