@@ -277,7 +277,7 @@ class Chatbot:
             if names != None:
                 self.users_name = names[0]
             self.__change_state(STATE.CONFIRM_LOGIN_NAME)
-            response = "Just checking I got that correctly, is your name {}?".format(self.users_name)
+            response = "Just checking if I got that right, is your name {}?".format(self.users_name)
 
         return response
 
@@ -402,7 +402,7 @@ class Chatbot:
             if names != None:
                 self.users_name = names[0]
             self.__change_state(STATE.CONFIRM_NAME)
-            response = "Is {} your name?".format(self.users_name)
+            response = "Just checking if I got that right, is your name {}?".format(self.users_name)
 
         return response
 
@@ -421,7 +421,7 @@ class Chatbot:
 
         elif intent in ["cancel", "goodbye"]:
             self.__change_state(STATE.GREETING)
-            response = "Sorry, I can't help without your name.. Goodbye!"
+            response = "Sorry, I can't recognise you without your name.. Goodbye!"
 
         else:
             return "Sorry, please could you confirm if {} is your name?".format(self.users_name)
