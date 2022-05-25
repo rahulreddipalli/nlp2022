@@ -45,28 +45,29 @@ class Chatbot:
 
         elif self.state == STATE.CREATE_PROFILE_PHRASE:
             response = self.ask_phrase(user_input)
-            self.state = STATE.CONFIRM_PHRASE
 
         elif self.state == STATE.CONFIRM_PHRASE:
             response = self.confirm_phrase(user_input)
 
+        elif self.state == STATE.CONFIRM_OVERWRITE:
+            response = self.confirm_overwrite(user_input)
+
         elif self.state == STATE.ADD_ENTRY:
-            response = self.add_entry(user_input)
+            response = self.add_entry(user_input, False)
+
+        elif self.state == STATE.ADD_OVERWRITE:
+            response = self.add_entry(user_input, True)
 
         elif self.state == STATE.VIEW_ENTRY:
             response = self.view_entry(user_input)
 
         elif self.state == STATE.RUNNING:
             intent = intent_handler.predict_intent(user_input)
-            # if intent_handler.get_intent(user_input)=="greeting":
-            # name=ner_handler.get_entity(user_input,"PERSON")[0]
-            # response = "Hi {}! What do you want to do today".format(name)
-            # response = "Goodbye"
 
             print(intent)
             if intent == "add_entry":
-                self.__change_state(STATE.ADD_ENTRY)
-                response = "Sure, tell me about your day!"
+                self.__change_state(STATE.CONFIRM_OVERWRITE)
+                response = self.check_if_exists(user_input)
 
             elif intent == "entry_query":
                 response = self.view_entry(user_input)
@@ -103,23 +104,61 @@ class Chatbot:
         user_data = pd.read_csv('csvs/user_csvs/{}.csv'.format(self.user_id))
         user_data = user_data.to_numpy()
 
+        entry = ""
         location = ""
         people = ""
         emotion = ""
+        emoticon = ""
         for row in user_data:
+            print(row)
             if row[0] == date:
-                location = row[2]
-                people = row[3]
+                entry = row[1]
+                location = self.__lst_to_list(row[2])
+                people = self.__lst_to_list(row[3])
                 emotion = row[4]
                 emoticon = row[5]
 
-            return "On {}, you were at {}, you were with {} and you felt {} {}.\nIs " \
-                   "there anything else you'd like to do?".format(date, location, people, emotion, emoticon)
+            summary = "Here's your summary for {}\n".format(date) +\
+            "You went to: {}\n".format(location) +\
+            "You were with: {}\n".format(people) +\
+            "Overall on this day you felt {} {}\n\n".format(emotion, emoticon) +\
+            "This was your full entry for the day: {}\n".format(entry) +\
+            "What else would you like to do today?"
+
+            return summary
 
         return "It seems like you don't have an entry for that day. What else would you like to do?"
 
-    def add_entry(self, user_input):
+
+    def confirm_overwrite(self, user_input):
         response = ""
+        intent = intent_handler.predict_intent(user_input)
+        if intent == "yes":
+            self.__change_state(STATE.ADD_OVERWRITE)
+            response = "Sure, tell me about your day!"
+            print("RESPONSE ASSIGNED")
+        elif intent == "no":
+            self.__change_state(STATE.RUNNING)
+            response = "No problem, let's leave your diary as it is. What would you like to do now?"
+        else:
+            response = "Sorry, please could you confirm if you want to overwrite today's entry?"
+
+        return response
+
+    def check_if_exists(self, user_input):
+        response = ""
+        user_data = pd.read_csv('csvs/user_csvs/{}.csv'.format(self.user_id))
+        user_data = user_data.to_numpy()
+        for row in user_data:
+            if str(row[0]) == str(date.today()):
+                self.__change_state(STATE.CONFIRM_OVERWRITE)
+                return "It seems that you've already got an entry in your diary for today. Would you like to overwrite it?"
+
+        self.__change_state(STATE.ADD_ENTRY)
+        return "Tell me about your day!"
+
+    def add_entry(self, user_input, overwrite):
+
         entry_ner = ner_handler.predict_ner(user_input)
 
         for item in entry_ner:
@@ -135,6 +174,12 @@ class Chatbot:
                 people.append(key)
 
         emotion, emoticon = sentiment_handler.get_emoticon(user_input)
+
+        if overwrite:
+            f = "csvs/user_csvs/{}.csv".format(self.user_id)
+            user_df = pd.read_csv(f)
+            user_df = user_df.iloc[:-1, :]
+            user_df.to_csv(f)
 
         with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
             writer = csv.writer(fd)
@@ -204,8 +249,8 @@ class Chatbot:
         if self.users_phrase is None:
             return "Sorry I didn't get a phrase. Can you give me a special phrase?"
 
+        self.state = STATE.CONFIRM_PHRASE
         response = "Is {} the phrase you'd like to use?".format(self.users_phrase)
-
         return response
 
     def confirm_phrase(self, user_input):
@@ -219,6 +264,7 @@ class Chatbot:
 
                 for user in users:
                     if self.users_name == user[1] and self.users_phrase == user[2]:
+                        self.__change_state(STATE.CREATE_PROFILE_PHRASE)
                         return "Sorry {}, please could you use a different phrase?".format(self.users_name)
             else:
                 users = []
@@ -297,3 +343,8 @@ class Chatbot:
     def __change_state(self, state: STATE):
         self.state = state
         chatbot_logger.log_bot_state(self.state.name)
+
+    def __lst_to_list(self,str_list):
+        new_val = str_list.replace('\'', '')
+        return new_val.strip('][')
+
