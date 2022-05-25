@@ -412,7 +412,7 @@ class Chatbot:
 
         if intent == "yes":
             self.__change_state(STATE.CREATE_PROFILE_PHRASE)
-            response = "Hi {}! Can you please give me a special phrase that you'll use you access your diary?".format(
+            response = "Hi {}! Can you please give me a special phrase that you'll use to access your diary?".format(
                 self.users_name)
 
         elif intent == "no":
