@@ -59,10 +59,15 @@ from datetime import date, timedelta
 import difflib
 
 def search_by_weekday(predictions,input_split):
+  input_split = [x.lower() for x in input_split]
   last_week = False
   error = False
   weekday = -1
+  today = date.today()
   target_date = ""
+  if 'today' in input_split: return str(today)
+  if 'yesterday' in input_split: return str(today-timedelta(day=1))
+  
   if 'week' in predictions.keys():
       pre_week_pos = input_split.index('week')-1
       if pre_week_pos>-1 and input_split[pre_week_pos].lower() == "last":
@@ -79,7 +84,7 @@ def search_by_weekday(predictions,input_split):
       weekday = days_of_week.index(day)
       break
 
-  today = date.today()
+  
   time_delta=timedelta(days=-today.weekday()+weekday)
   start = today + time_delta
   if not last_week:
