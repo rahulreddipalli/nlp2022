@@ -241,7 +241,6 @@ class Chatbot:
             for row in user_data:
                 if row[0] == today:
                     print(row, "exists")
-                    entry = row[1]
                     location = self.__lst_to_list(row[2])
                     people = self.__lst_to_list(row[3])
                     emotion = row[4]

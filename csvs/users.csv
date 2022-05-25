@@ -1,12 +1,4 @@
-user_id,user_name,user_phrase
-0,Bob,test123
-user_id,user_name,user_phrase
-1,Kevin,test123
-user_id,user_name,user_phrase
-3,Kevin,test1234
-user_id,user_name,user_phrase
-5,Kim,test12345
-user_id,user_name,user_phrase
-7,Kim,bye
-user_id,user_name,user_phrase
-9,Red,red123
+user_id,user_name,user_phrase
+
+0,Steven,test123
+
