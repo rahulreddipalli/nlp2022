@@ -110,22 +110,22 @@ class Chatbot:
         emotion = ""
         emoticon = ""
         for row in user_data:
-            print(row)
             if row[0] == date:
+                print(row, "exists")
                 entry = row[1]
                 location = self.__lst_to_list(row[2])
                 people = self.__lst_to_list(row[3])
                 emotion = row[4]
                 emoticon = row[5]
 
-            summary = "Here's your summary for {}\n".format(date) +\
-            "You went to: {}\n".format(location) +\
-            "You were with: {}\n".format(people) +\
-            "Overall on this day you felt {} {}\n\n".format(emotion, emoticon) +\
-            "This was your full entry for the day: {}\n".format(entry) +\
-            "What else would you like to do today?"
+                summary = "Here's your summary for {}\n\n".format(date) +\
+                "You went to: {}\n".format(location) +\
+                "You were with: {}\n".format(people) +\
+                "Overall on this day you felt {} {}\n\n".format(emotion, emoticon) +\
+                "This was your full entry for the day: {}\n\n".format(entry) +\
+                "What else would you like to do today?"
 
-            return summary
+                return summary
 
         return "It seems like you don't have an entry for that day. What else would you like to do?"
 
@@ -183,7 +183,7 @@ class Chatbot:
 
         with open('csvs/user_csvs/{}.csv'.format(self.user_id), 'a') as fd:
             writer = csv.writer(fd)
-            writer.writerow([str(date.today()), user_input, locations, people, emotion, emoticon])
+            writer.writerow([str(date.today()), str(user_input), locations, people, emotion, emoticon])
             fd.close()
 
         response = "Thanks for telling me about your day. This was your entry:\n{}\n" \

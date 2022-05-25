@@ -66,7 +66,7 @@ def search_by_weekday(predictions,input_split):
   today = date.today()
   target_date = ""
   if 'today' in input_split: return str(today)
-  if 'yesterday' in input_split: return str(today-timedelta(day=1))
+  if 'yesterday' in input_split: return str(today-timedelta(days=1))
   
   if 'week' in predictions.keys():
       pre_week_pos = input_split.index('week')-1
